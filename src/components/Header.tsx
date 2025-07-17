@@ -40,7 +40,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative text-foreground hover:text-primary transition-colors duration-200 group"
+                className="relative text-foreground hover:text-primary transition-colors duration-200 group font-bold"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -65,7 +65,7 @@ const Header = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-left text-foreground hover:text-primary transition-colors duration-200"
+                  className="text-left text-foreground hover:text-primary transition-colors duration-200 font-bold"
                 >
                   {item.label}
                 </button>
