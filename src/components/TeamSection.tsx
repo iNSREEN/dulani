@@ -13,7 +13,7 @@ const TeamSection = () => {
     {
       name: "Shekha Alabduslam",
       roles: ["Metaverse developer", "AI specialist", "Digital Solutions Strategist", "Project Manager"],
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
+      image: "/lovable-uploads/cb37816e-b942-40c1-92e7-f9ae6c705c47.png"
     },
     {
       name: "Shaden Almashuq",
