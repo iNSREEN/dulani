@@ -3,7 +3,7 @@ const TeamSection = () => {
     {
       name: "Fatima Aldukkan",
       roles: ["XR developer", "AI specialist", "Innovation Practitioner", "Product Manager"],
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b830?w=400&h=400&fit=crop&crop=face"
+      image: "/lovable-uploads/553446c0-92b4-48dd-8771-9215f0def097.png"
     },
     {
       name: "Nsreen Alfaifi", 
