@@ -23,7 +23,7 @@ const TeamSection = () => {
     {
       name: "Lujain Alahrbi",
       roles: ["Metaverse developer", "Project Manager", "Innovation Practitioner", "AI specialist"],
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+      image: "/lovable-uploads/1c1bdd27-1183-47ca-9772-36da77403e04.png"
     }
   ];
 
