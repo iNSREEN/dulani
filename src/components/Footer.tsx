@@ -1,6 +1,12 @@
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
+    <>
+      {/* Pattern Divider before Footer */}
+      <div className="w-full h-16 bg-repeat-x opacity-25" 
+           style={{ backgroundImage: "url('/lovable-uploads/f4ebc363-1b53-4abb-a3fe-981b9d22df25.png')", backgroundSize: "auto 100%" }}>
+      </div>
+      
+      <footer className="bg-primary text-primary-foreground py-12 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo and Brand */}
@@ -30,7 +36,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 
