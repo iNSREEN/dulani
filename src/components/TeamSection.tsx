@@ -8,7 +8,7 @@ const TeamSection = () => {
     {
       name: "Nsreen Alfaifi", 
       roles: ["Software developer", "Quality Assurance Engineer", "Researcher", "Technical Manager"],
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+      image: "/lovable-uploads/eacd6294-93cc-48d5-89d1-626cdbf68c5c.png"
     },
     {
       name: "Shekha Alabduslam",
@@ -18,7 +18,7 @@ const TeamSection = () => {
     {
       name: "Shaden Almashuq",
       roles: ["XR developer", "AI specialist", "UI/UX designer", "3D Designer"],
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+      image: "/lovable-uploads/eacd6294-93cc-48d5-89d1-626cdbf68c5c.png"
     },
     {
       name: "Lujain Alahrbi",
