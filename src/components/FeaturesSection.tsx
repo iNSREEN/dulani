@@ -26,7 +26,7 @@ const FeaturesSection = () => {
     <>
       {/* Pattern Divider */}
       <div className="w-full h-16 bg-repeat-x opacity-20" 
-           style={{ backgroundImage: "url('/lovable-uploads/6595d837-f4e6-4e69-a33d-27ea2e60c761.png')", backgroundSize: "auto 100%" }}>
+           style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "auto 100%" }}>
       </div>
       
       <section id="features" className="py-20 relative overflow-hidden">

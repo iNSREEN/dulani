@@ -3,7 +3,7 @@ const AboutSection = () => {
     <>
       {/* Pattern Divider */}
       <div className="w-full h-16 bg-repeat-x opacity-20" 
-           style={{ backgroundImage: "url('/lovable-uploads/f4ebc363-1b53-4abb-a3fe-981b9d22df25.png')", backgroundSize: "auto 100%" }}>
+           style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "auto 100%" }}>
       </div>
       
       <section id="about" className="py-20 bg-muted/30 relative overflow-hidden">
