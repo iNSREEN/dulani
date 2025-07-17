@@ -91,16 +91,12 @@ const HeroSection = () => {
                         <div className="w-4 h-1.5 bg-black rounded-sm"></div>
                       </div>
                     </div>
-                    {/* App Content - Using a placeholder for the third screen */}
-                    <div className="w-full h-full bg-gradient-to-b from-primary/10 to-primary/20 flex items-center justify-center">
-                      <div className="text-center p-6">
-                        <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center">
-                          <span className="text-primary-foreground text-xl font-bold">AR</span>
-                        </div>
-                        <h3 className="text-primary font-bold text-base mb-2">AR Navigation</h3>
-                        <p className="text-muted-foreground text-xs">Interactive directions overlaid on your surroundings</p>
-                      </div>
-                    </div>
+                    {/* App Content - AR Navigation Screenshot */}
+                    <img 
+                      src="/lovable-uploads/bfcd5964-9fc8-4d43-9ba8-a777f2afc8b7.png" 
+                      alt="Dulani AR Navigation"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
