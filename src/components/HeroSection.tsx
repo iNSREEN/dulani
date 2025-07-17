@@ -36,15 +36,6 @@ const HeroSection = () => {
               <div className="relative transform -rotate-12 hover:rotate-0 transition-transform duration-500">
                 <div className="w-48 h-96 bg-black rounded-[32px] p-1.5 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-[26px] overflow-hidden relative">
-                    {/* Status Bar */}
-                    <div className="absolute top-0 left-0 right-0 h-6 bg-white flex items-center justify-between px-4 text-xs font-medium z-10">
-                      <span>9:41</span>
-                      <div className="flex space-x-1">
-                        <div className="w-4 h-2 bg-black rounded-sm"></div>
-                        <div className="w-6 h-2 bg-black rounded-sm"></div>
-                        <div className="w-6 h-2 bg-black rounded-sm"></div>
-                      </div>
-                    </div>
                     {/* App Content */}
                     <img 
                       src="/lovable-uploads/e92855f0-03d5-410f-8aba-ab63957392be.png" 
@@ -59,15 +50,6 @@ const HeroSection = () => {
               <div className="relative z-10 transform hover:scale-105 transition-transform duration-500">
                 <div className="w-48 h-96 bg-black rounded-[32px] p-1.5 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-[26px] overflow-hidden relative">
-                    {/* Status Bar */}
-                    <div className="absolute top-0 left-0 right-0 h-6 bg-white flex items-center justify-between px-4 text-xs font-medium z-10">
-                      <span>9:41</span>
-                      <div className="flex space-x-1">
-                        <div className="w-3 h-1.5 bg-black rounded-sm"></div>
-                        <div className="w-4 h-1.5 bg-black rounded-sm"></div>
-                        <div className="w-4 h-1.5 bg-black rounded-sm"></div>
-                      </div>
-                    </div>
                     {/* App Content */}
                     <img 
                       src="/lovable-uploads/499054ec-64a7-4823-95ab-3728f92dd311.png" 
@@ -82,15 +64,6 @@ const HeroSection = () => {
               <div className="relative transform rotate-12 hover:rotate-0 transition-transform duration-500">
                 <div className="w-48 h-96 bg-black rounded-[32px] p-1.5 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-[26px] overflow-hidden relative">
-                    {/* Status Bar */}
-                    <div className="absolute top-0 left-0 right-0 h-6 bg-white flex items-center justify-between px-4 text-xs font-medium">
-                      <span>9:41</span>
-                      <div className="flex space-x-1">
-                        <div className="w-3 h-1.5 bg-black rounded-sm"></div>
-                        <div className="w-4 h-1.5 bg-black rounded-sm"></div>
-                        <div className="w-4 h-1.5 bg-black rounded-sm"></div>
-                      </div>
-                    </div>
                     {/* App Content - AR Navigation Screenshot */}
                     <img 
                       src="/lovable-uploads/bfcd5964-9fc8-4d43-9ba8-a777f2afc8b7.png" 
