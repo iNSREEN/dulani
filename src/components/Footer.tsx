@@ -4,10 +4,12 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo and Brand */}
-          <div className="flex items-center space-x-2 mb-6 md:mb-0">
-            <div className="w-8 h-8 bg-primary-foreground rounded-md flex items-center justify-center">
-              <span className="text-primary font-bold text-lg">D</span>
-            </div>
+          <div className="flex items-center space-x-3 mb-6 md:mb-0">
+            <img 
+              src="/lovable-uploads/24037984-72d9-41ea-a970-810925759561.png" 
+              alt="Dulani Logo" 
+              className="w-8 h-8"
+            />
             <span className="text-2xl font-bold">Dulani</span>
           </div>
 

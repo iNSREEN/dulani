@@ -27,13 +27,13 @@ const HeroSection = () => {
 
           {/* Right Side - Mobile Screenshots */}
           <div className="relative">
-            <div className="flex justify-center items-center space-x-4">
+            <div className="flex justify-center items-center space-x-3">
               {/* Mobile Frame 1 */}
               <div className="relative transform -rotate-12 hover:rotate-0 transition-transform duration-500">
-                <div className="w-64 h-[500px] bg-black rounded-[40px] p-2 shadow-2xl">
-                  <div className="w-full h-full bg-white rounded-[32px] overflow-hidden relative">
+                <div className="w-48 h-96 bg-black rounded-[32px] p-1.5 shadow-2xl">
+                  <div className="w-full h-full bg-white rounded-[26px] overflow-hidden relative">
                     {/* Status Bar */}
-                    <div className="absolute top-0 left-0 right-0 h-8 bg-white flex items-center justify-between px-6 text-xs font-medium">
+                    <div className="absolute top-0 left-0 right-0 h-6 bg-white flex items-center justify-between px-4 text-xs font-medium z-10">
                       <span>9:41</span>
                       <div className="flex space-x-1">
                         <div className="w-4 h-2 bg-black rounded-sm"></div>
@@ -53,15 +53,15 @@ const HeroSection = () => {
 
               {/* Mobile Frame 2 - Center */}
               <div className="relative z-10 transform hover:scale-105 transition-transform duration-500">
-                <div className="w-64 h-[500px] bg-black rounded-[40px] p-2 shadow-2xl">
-                  <div className="w-full h-full bg-white rounded-[32px] overflow-hidden relative">
+                <div className="w-48 h-96 bg-black rounded-[32px] p-1.5 shadow-2xl">
+                  <div className="w-full h-full bg-white rounded-[26px] overflow-hidden relative">
                     {/* Status Bar */}
-                    <div className="absolute top-0 left-0 right-0 h-8 bg-white flex items-center justify-between px-6 text-xs font-medium z-10">
+                    <div className="absolute top-0 left-0 right-0 h-6 bg-white flex items-center justify-between px-4 text-xs font-medium z-10">
                       <span>9:41</span>
                       <div className="flex space-x-1">
-                        <div className="w-4 h-2 bg-black rounded-sm"></div>
-                        <div className="w-6 h-2 bg-black rounded-sm"></div>
-                        <div className="w-6 h-2 bg-black rounded-sm"></div>
+                        <div className="w-3 h-1.5 bg-black rounded-sm"></div>
+                        <div className="w-4 h-1.5 bg-black rounded-sm"></div>
+                        <div className="w-4 h-1.5 bg-black rounded-sm"></div>
                       </div>
                     </div>
                     {/* App Content */}
@@ -76,25 +76,25 @@ const HeroSection = () => {
 
               {/* Mobile Frame 3 */}
               <div className="relative transform rotate-12 hover:rotate-0 transition-transform duration-500">
-                <div className="w-64 h-[500px] bg-black rounded-[40px] p-2 shadow-2xl">
-                  <div className="w-full h-full bg-white rounded-[32px] overflow-hidden relative">
+                <div className="w-48 h-96 bg-black rounded-[32px] p-1.5 shadow-2xl">
+                  <div className="w-full h-full bg-white rounded-[26px] overflow-hidden relative">
                     {/* Status Bar */}
-                    <div className="absolute top-0 left-0 right-0 h-8 bg-white flex items-center justify-between px-6 text-xs font-medium">
+                    <div className="absolute top-0 left-0 right-0 h-6 bg-white flex items-center justify-between px-4 text-xs font-medium">
                       <span>9:41</span>
                       <div className="flex space-x-1">
-                        <div className="w-4 h-2 bg-black rounded-sm"></div>
-                        <div className="w-6 h-2 bg-black rounded-sm"></div>
-                        <div className="w-6 h-2 bg-black rounded-sm"></div>
+                        <div className="w-3 h-1.5 bg-black rounded-sm"></div>
+                        <div className="w-4 h-1.5 bg-black rounded-sm"></div>
+                        <div className="w-4 h-1.5 bg-black rounded-sm"></div>
                       </div>
                     </div>
                     {/* App Content - Using a placeholder for the third screen */}
                     <div className="w-full h-full bg-gradient-to-b from-primary/10 to-primary/20 flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
-                          <span className="text-primary-foreground text-2xl font-bold">AR</span>
+                      <div className="text-center p-6">
+                        <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center">
+                          <span className="text-primary-foreground text-xl font-bold">AR</span>
                         </div>
-                        <h3 className="text-primary font-bold text-lg mb-2">AR Navigation</h3>
-                        <p className="text-muted-foreground text-sm">Interactive directions overlaid on your surroundings</p>
+                        <h3 className="text-primary font-bold text-base mb-2">AR Navigation</h3>
+                        <p className="text-muted-foreground text-xs">Interactive directions overlaid on your surroundings</p>
                       </div>
                     </div>
                   </div>
