@@ -68,7 +68,7 @@ const TeamSection = () => {
               </h3>
 
               {/* Divider */}
-              <div className="w-12 h-0.5 bg-primary mx-auto mb-4"></div>
+              <div className="w-20 h-0.5 bg-primary mx-auto mb-4"></div>
 
               {/* Roles */}
               <div className="space-y-1">
