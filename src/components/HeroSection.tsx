@@ -34,7 +34,7 @@ const HeroSection = () => {
             <div className="flex justify-center items-center space-x-1 sm:space-x-2 md:space-x-3 scale-75 sm:scale-90 md:scale-100">
               {/* Mobile Frame 1 */}
               <div className="relative transform -rotate-12 hover:rotate-0 transition-transform duration-500">
-                <div className="w-32 h-64 sm:w-36 sm:h-72 md:w-40 md:h-80 lg:w-44 lg:h-88 xl:w-48 xl:h-96 bg-black rounded-[20px] sm:rounded-[24px] md:rounded-[28px] lg:rounded-[32px] p-1 sm:p-1.5 shadow-2xl">
+                <div className="w-28 h-56 sm:w-32 sm:h-64 md:w-36 md:h-72 lg:w-40 lg:h-80 xl:w-44 xl:h-88 bg-black rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[28px] p-1 sm:p-1.5 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[26px] overflow-hidden relative">
                     {/* App Content */}
                     <img 
@@ -48,8 +48,8 @@ const HeroSection = () => {
 
               {/* Mobile Frame 2 - Center */}
               <div className="relative z-10 transform hover:scale-105 transition-transform duration-500">
-                <div className="w-32 h-64 sm:w-36 sm:h-72 md:w-40 md:h-80 lg:w-44 lg:h-88 xl:w-48 xl:h-96 bg-black rounded-[20px] sm:rounded-[24px] md:rounded-[28px] lg:rounded-[32px] p-1 sm:p-1.5 shadow-2xl">
-                  <div className="w-full h-full bg-white rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[26px] overflow-hidden relative">
+                <div className="w-28 h-56 sm:w-32 sm:h-64 md:w-36 md:h-72 lg:w-40 lg:h-80 xl:w-44 xl:h-88 bg-black rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[28px] p-1 sm:p-1.5 shadow-2xl">
+                  <div className="w-full h-full bg-white rounded-[12px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[22px] overflow-hidden relative">
                     {/* App Content */}
                     <img 
                       src="/lovable-uploads/499054ec-64a7-4823-95ab-3728f92dd311.png" 
@@ -62,8 +62,8 @@ const HeroSection = () => {
 
               {/* Mobile Frame 3 */}
               <div className="relative transform rotate-12 hover:rotate-0 transition-transform duration-500">
-                <div className="w-32 h-64 sm:w-36 sm:h-72 md:w-40 md:h-80 lg:w-44 lg:h-88 xl:w-48 xl:h-96 bg-black rounded-[20px] sm:rounded-[24px] md:rounded-[28px] lg:rounded-[32px] p-1 sm:p-1.5 shadow-2xl">
-                  <div className="w-full h-full bg-white rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[26px] overflow-hidden relative">
+                <div className="w-28 h-56 sm:w-32 sm:h-64 md:w-36 md:h-72 lg:w-40 lg:h-80 xl:w-44 xl:h-88 bg-black rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[28px] p-1 sm:p-1.5 shadow-2xl">
+                  <div className="w-full h-full bg-white rounded-[12px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[22px] overflow-hidden relative">
                     {/* App Content - AR Navigation Screenshot */}
                     <img 
                       src="/lovable-uploads/bfcd5964-9fc8-4d43-9ba8-a777f2afc8b7.png" 
