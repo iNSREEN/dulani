@@ -61,12 +61,24 @@ export function InterestForm({ children }: InterestFormProps) {
     },
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log('Form submitted:', data);
-    // Here you would typically send the data to your backend
-    setOpen(false);
-    form.reset();
-    setShowOtherInput(false);
+  const onSubmit = async (data: FormData) => {
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbyOp0iGaSIn-mgow1DV3TpnexPzkbiR8OkR0RWUQbkLf0ON3CjfzfxEgLSCQ_hhSrM/exec', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      
+      if (response.ok) {
+        setOpen(false);
+        form.reset();
+        setShowOtherInput(false);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
   };
 
   const handleCheckboxChange = (value: string, checked: boolean) => {
