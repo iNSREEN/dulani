@@ -63,7 +63,7 @@ export function InterestForm({ children }: InterestFormProps) {
 
   const onSubmit = async (data: FormData) => {
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbyOp0iGaSIn-mgow1DV3TpnexPzkbiR8OkR0RWUQbkLf0ON3CjfzfxEgLSCQ_hhSrM/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbx9jgEsH_gdcQc6P7nqGcDeFjLJ7jMk4xX1AiHPv46K6N9Q7R31FHBmNXanrtYeo8g/exec', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
