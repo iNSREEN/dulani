@@ -17,6 +17,12 @@ const AboutSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 animate-fade-in">
             What is <span className="text-primary bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Dulani</span>?
           </h2>
+          
+          {/* Pattern Divider */}
+          <div className="flex justify-center my-12">
+            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60"></div>
+          </div>
+          
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed animate-fade-in delay-200">
             Dulani is an AI-powered navigation app that transforms visitor experiences. 
             Using augmented reality (AR) and real-time AI analytics, it provides seamless 
