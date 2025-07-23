@@ -1,6 +1,6 @@
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 -mt-16 relative overflow-hidden">
+    <section id="about" className="py-32 -mt-16 relative overflow-hidden">
       {/* Curved top section that overlaps with hero */}
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-transparent via-muted/10 to-muted/30"></div>
       <svg className="absolute top-0 left-0 w-full h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
