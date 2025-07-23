@@ -1,9 +1,9 @@
-import { Bot, ScanLine, Users } from 'lucide-react';
+import { Cpu, ScanLine, Users } from 'lucide-react';
 
 const FeaturesSection = () => {
   const features = [
     {
-      icon: Bot,
+      icon: Cpu,
       title: "AI-Powered Navigation",
       description: "Advanced AI algorithms analyze real-time data to calculate optimal paths",
       gradient: "from-primary/20 to-primary/10"
