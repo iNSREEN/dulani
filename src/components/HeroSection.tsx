@@ -34,7 +34,7 @@ const HeroSection = () => {
             <div className="flex justify-center items-center space-x-1 sm:space-x-2 md:space-x-3 scale-75 sm:scale-90 md:scale-100">
               {/* Mobile Frame 1 */}
               <div className="relative transform -rotate-12 hover:rotate-0 transition-transform duration-500">
-                <div className="w-28 h-56 sm:w-32 sm:h-64 md:w-36 md:h-72 lg:w-40 lg:h-80 xl:w-44 xl:h-88 bg-black rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[28px] p-1 sm:p-1.5 shadow-2xl">
+                <div className="w-28 h-60 sm:w-32 sm:h-69 md:w-36 md:h-78 lg:w-40 lg:h-86 xl:w-44 xl:h-95 bg-black rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[28px] p-1 sm:p-1.5 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[26px] overflow-hidden relative">
                     {/* App Content */}
                     <img 
@@ -48,7 +48,7 @@ const HeroSection = () => {
 
               {/* Mobile Frame 2 - Center */}
               <div className="relative z-10 transform hover:scale-105 transition-transform duration-500">
-                <div className="w-28 h-56 sm:w-32 sm:h-64 md:w-36 md:h-72 lg:w-40 lg:h-80 xl:w-44 xl:h-88 bg-black rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[28px] p-1 sm:p-1.5 shadow-2xl">
+                <div className="w-28 h-60 sm:w-32 sm:h-69 md:w-36 md:h-78 lg:w-40 lg:h-86 xl:w-44 xl:h-95 bg-black rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[28px] p-1 sm:p-1.5 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-[12px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[22px] overflow-hidden relative">
                     {/* App Content */}
                     <img 
@@ -62,7 +62,7 @@ const HeroSection = () => {
 
               {/* Mobile Frame 3 */}
               <div className="relative transform rotate-12 hover:rotate-0 transition-transform duration-500">
-                <div className="w-28 h-56 sm:w-32 sm:h-64 md:w-36 md:h-72 lg:w-40 lg:h-80 xl:w-44 xl:h-88 bg-black rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[28px] p-1 sm:p-1.5 shadow-2xl">
+                <div className="w-28 h-60 sm:w-32 sm:h-69 md:w-36 md:h-78 lg:w-40 lg:h-86 xl:w-44 xl:h-95 bg-black rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[28px] p-1 sm:p-1.5 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-[12px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[22px] overflow-hidden relative">
                     {/* App Content - AR Navigation Screenshot */}
                     <img 
