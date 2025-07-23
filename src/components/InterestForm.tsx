@@ -195,7 +195,7 @@ export function InterestForm({ children }: InterestFormProps) {
                         />
                         <label
                           htmlFor={option.id}
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                          className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {option.label}
                         </label>
@@ -257,9 +257,9 @@ export function InterestForm({ children }: InterestFormProps) {
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel>
+                    <label className="text-sm leading-none">
                       I'd like to receive the latest updates, news, and promotions
-                    </FormLabel>
+                    </label>
                   </div>
                 </FormItem>
               )}
