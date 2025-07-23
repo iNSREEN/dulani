@@ -4,10 +4,8 @@ import { InterestForm } from '@/components/InterestForm';
 const HeroSection = () => {
   return (
     <section id="hero" className="pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-12 md:pb-16 min-h-screen flex items-center relative overflow-hidden">
-      {/* Top Pattern */}
-      <div className="absolute top-0 left-0 right-0 h-20 bg-repeat-x opacity-10" 
-           style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "auto 100%" }}>
-      </div>
+      {/* Subtle Top Gradient */}
+      <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary/20 via-secondary/30 to-primary/20"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 xl:gap-16 items-center">
           {/* Left Side - Text + CTA */}
@@ -89,10 +87,9 @@ const HeroSection = () => {
             {/* Background decoration */}
             <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-primary/5 rounded-full blur-3xl"></div>
             
-            {/* Pattern overlay for mobile frames area */}
-            <div className="absolute -z-5 bottom-0 left-0 right-0 h-12 sm:h-16 md:h-20 bg-repeat-x opacity-5" 
-                 style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "auto 100%" }}>
-            </div>
+            {/* Decorative elements */}
+            <div className="absolute -z-5 bottom-4 left-4 w-3 h-3 bg-primary/20 rounded-full"></div>
+            <div className="absolute -z-5 top-4 right-4 w-2 h-2 bg-secondary/30 rounded-full"></div>
           </div>
         </div>
       </div>

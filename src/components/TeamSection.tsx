@@ -29,9 +29,13 @@ const TeamSection = () => {
 
   return (
     <>
-      {/* Pattern Divider */}
-      <div className="w-full h-16 bg-repeat-x opacity-15" 
-           style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "auto 100%" }}>
+      {/* Diamond Pattern Divider */}
+      <div className="w-full h-16 relative overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center space-x-8">
+          <div className="w-4 h-4 bg-gradient-to-br from-primary to-secondary transform rotate-45 opacity-40"></div>
+          <div className="w-6 h-6 bg-gradient-to-br from-secondary to-primary transform rotate-45 opacity-60"></div>
+          <div className="w-4 h-4 bg-gradient-to-br from-primary to-secondary transform rotate-45 opacity-40"></div>
+        </div>
       </div>
       
       <section id="team" className="py-20 bg-muted/30 relative overflow-hidden">

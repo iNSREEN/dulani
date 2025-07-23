@@ -1,9 +1,16 @@
 const AboutSection = () => {
   return (
     <>
-      {/* Pattern Divider */}
-      <div className="w-full h-16 bg-repeat-x opacity-20" 
-           style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "auto 100%" }}>
+      {/* Elegant Geometric Divider */}
+      <div className="w-full h-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-secondary/10 to-primary/5"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="flex space-x-4">
+            <div className="w-2 h-2 bg-primary/30 rounded-full animate-pulse"></div>
+            <div className="w-3 h-3 bg-secondary/40 rounded-full animate-pulse delay-100"></div>
+            <div className="w-2 h-2 bg-primary/30 rounded-full animate-pulse delay-200"></div>
+          </div>
+        </div>
       </div>
       
       <section id="about" className="py-20 bg-muted/30 relative overflow-hidden">

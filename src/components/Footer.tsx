@@ -1,10 +1,8 @@
 const Footer = () => {
   return (
     <>
-      {/* Pattern Divider before Footer */}
-      <div className="w-full h-16 bg-repeat-x opacity-25" 
-           style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "auto 100%" }}>
-      </div>
+      {/* Gradient Line Divider */}
+      <div className="w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
       
       <footer className="bg-secondary text-secondary-foreground py-12 relative overflow-hidden">
         <div className="container mx-auto px-4">

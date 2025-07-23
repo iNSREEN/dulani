@@ -25,9 +25,13 @@ const ContactSection = () => {
 
   return (
     <>
-      {/* Pattern Divider */}
-      <div className="w-full h-16 bg-repeat-x opacity-20" 
-           style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "auto 100%" }}>
+      {/* Circular Pattern Divider */}
+      <div className="w-full h-20 relative overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center space-x-6">
+          <div className="w-8 h-8 border-2 border-primary/30 rounded-full"></div>
+          <div className="w-12 h-12 border-2 border-secondary/40 rounded-full bg-secondary/10"></div>
+          <div className="w-8 h-8 border-2 border-primary/30 rounded-full"></div>
+        </div>
       </div>
       
       <section id="contact" className="py-20 relative overflow-hidden">

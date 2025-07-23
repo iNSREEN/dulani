@@ -21,9 +21,12 @@ const FeaturesSection = () => {
 
   return (
     <>
-      {/* Pattern Divider */}
-      <div className="w-full h-16 bg-repeat-x opacity-20" 
-           style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "auto 100%" }}>
+      {/* Wave Pattern Divider */}
+      <div className="w-full h-16 relative overflow-hidden">
+        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,60 C300,20 600,100 900,60 C1050,30 1150,90 1200,60 L1200,120 L0,120 Z" 
+                fill="currentColor" className="text-primary/10"></path>
+        </svg>
       </div>
       
       <section id="features" className="py-20 relative overflow-hidden">
