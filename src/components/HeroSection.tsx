@@ -17,9 +17,9 @@ const HeroSection = () => {
                 <span className="text-primary">Dulani</span>{" "}
                 <span className="text-foreground">Your Next Guide – Smarter, Faster, and More Interactive!</span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-full lg:max-w-lg mx-auto lg:mx-0">
-                Transform visitor experiences with AI-powered navigation, augmented reality guidance, and real-time analytics.
-              </p>
+               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-full lg:max-w-lg mx-auto lg:mx-0">
+                 Transform visitor experiences and avoid crowds with AI-powered navigation and augmented reality guidance.
+               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Button 
