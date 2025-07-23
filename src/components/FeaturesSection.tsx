@@ -17,7 +17,7 @@ const FeaturesSection = () => {
     {
       icon: Users,
       title: "Crowd Management",
-      description: "Dynamic routes adapt to crowd movements in real time",
+      description: "Enhance visitor experience and avoid crowds using AI and AR to reach destinations faster and smoother",
       gradient: "from-primary/20 to-secondary/20"
     }
   ];
