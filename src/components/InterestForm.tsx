@@ -23,10 +23,12 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Textarea } from '@/components/ui/textarea';
 
 const formSchema = z.object({
+  name: z.string().min(1, 'Name is required'),
   email: z.string().email('Please enter a valid email address'),
   phone: z.string().min(1, 'Phone number is required'),
   hearAboutUs: z.array(z.string()).min(1, 'Please select at least one option'),
   otherDetails: z.string().optional(),
+  comments: z.string().optional(),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -50,10 +52,12 @@ export function InterestForm({ children }: InterestFormProps) {
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      name: '',
       email: '',
       phone: '',
       hearAboutUs: [],
       otherDetails: '',
+      comments: '',
     },
   });
 
@@ -97,6 +101,20 @@ export function InterestForm({ children }: InterestFormProps) {
         </DialogHeader>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Name</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Your full name" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
             <FormField
               control={form.control}
               name="email"
@@ -173,6 +191,24 @@ export function InterestForm({ children }: InterestFormProps) {
                 )}
               />
             )}
+
+            <FormField
+              control={form.control}
+              name="comments"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Comments</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Any additional comments or questions..."
+                      className="resize-none"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
             <div className="flex justify-end space-x-3">
               <Button
