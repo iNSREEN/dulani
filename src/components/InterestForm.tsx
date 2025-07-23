@@ -70,37 +70,32 @@ export function InterestForm({ children }: InterestFormProps) {
     console.log('Submitting form data:', data);
     
     try {
+      // Create FormData for Google Apps Script
+      const formData = new window.FormData();
+      formData.append('name', data.name);
+      formData.append('email', data.email);
+      formData.append('phone', data.phone);
+      formData.append('hearAboutUs', JSON.stringify(data.hearAboutUs));
+      formData.append('otherDetails', data.otherDetails || '');
+      formData.append('comments', data.comments || '');
+
       const response = await fetch('https://script.google.com/macros/s/AKfycbx9jgEsH_gdcQc6P7nqGcDeFjLJ7jMk4xX1AiHPv46K6N9Q7R31FHBmNXanrtYeo8g/exec', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
+        body: formData,
+        mode: 'no-cors'
       });
       
-      console.log('Response status:', response.status);
-      console.log('Response headers:', response.headers);
+      // With no-cors mode, we can't read the response, so we assume success
+      console.log('Form submitted successfully');
       
-      if (response.ok) {
-        const result = await response.json();
-        console.log('Success result:', result);
-        
-        toast({
-          title: "Success!",
-          description: "Thank you for your interest! We'll be in touch soon.",
-        });
-        
-        setOpen(false);
-        form.reset();
-        setShowOtherInput(false);
-      } else {
-        console.error('Response not ok:', response.status, response.statusText);
-        toast({
-          title: "Error",
-          description: "Something went wrong. Please try again.",
-          variant: "destructive",
-        });
-      }
+      toast({
+        title: "Success!",
+        description: "Thank you for your interest! We'll be in touch soon.",
+      });
+      
+      setOpen(false);
+      form.reset();
+      setShowOtherInput(false);
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
