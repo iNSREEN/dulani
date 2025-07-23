@@ -271,7 +271,7 @@ export function InterestForm({ children }: InterestFormProps) {
                 variant="outline"
                 onClick={() => setOpen(false)}
                 disabled={isSubmitting}
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto hover:bg-gray-100 hover:text-gray-700"
               >
                 Cancel
               </Button>
