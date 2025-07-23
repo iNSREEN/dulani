@@ -8,9 +8,18 @@ const AboutSection = () => {
               fill="currentColor" className="text-muted/20"></path>
       </svg>
       
-      {/* Floating elements */}
-      <div className="absolute top-40 left-20 w-6 h-6 bg-primary/30 rounded-full animate-pulse delay-700"></div>
-      <div className="absolute bottom-20 right-32 w-8 h-8 bg-secondary/25 rounded-full animate-pulse delay-300"></div>
+      {/* Brand pattern background */}
+      <div className="absolute inset-0 opacity-10" 
+           style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "300px", backgroundRepeat: "repeat" }}>
+      </div>
+      
+      {/* Floating brand elements */}
+      <div className="absolute top-40 left-20 w-8 h-8 opacity-20">
+        <img src="/lovable-uploads/24037984-72d9-41ea-a970-810925759561.png" alt="" className="w-full h-full animate-pulse delay-700" />
+      </div>
+      <div className="absolute bottom-20 right-32 w-6 h-6 opacity-15">
+        <img src="/lovable-uploads/24037984-72d9-41ea-a970-810925759561.png" alt="" className="w-full h-full animate-pulse delay-300" />
+      </div>
       
       <div className="container mx-auto px-4 relative z-10 pt-16">
         <div className="text-center max-w-4xl mx-auto">
