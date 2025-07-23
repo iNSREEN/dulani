@@ -76,20 +76,31 @@ export function InterestForm({ children }: InterestFormProps) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
-        mode: 'no-cors'
       });
       
-      // With no-cors mode, we assume success since we can't read the response
-      console.log('Form submitted to Google Apps Script');
+      console.log('Response status:', response.status);
+      console.log('Response headers:', response.headers);
       
-      toast({
-        title: "Success!",
-        description: "Thank you for your interest! We'll be in touch soon.",
-      });
-      
-      setOpen(false);
-      form.reset();
-      setShowOtherInput(false);
+      if (response.ok) {
+        const result = await response.json();
+        console.log('Success result:', result);
+        
+        toast({
+          title: "Success!",
+          description: "Thank you for your interest! We'll be in touch soon.",
+        });
+        
+        setOpen(false);
+        form.reset();
+        setShowOtherInput(false);
+      } else {
+        console.error('Response not ok:', response.status, response.statusText);
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
