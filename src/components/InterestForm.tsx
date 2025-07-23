@@ -132,7 +132,7 @@ export function InterestForm({ children }: InterestFormProps) {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto mx-4">
         <DialogHeader>
-          <DialogTitle>We'd Love to Hear From You!</DialogTitle>
+          <DialogTitle style={{ color: '#001A6E' }}>We'd Love to Hear From You!</DialogTitle>
         </DialogHeader>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
