@@ -63,26 +63,19 @@ export function InterestForm({ children }: InterestFormProps) {
 
   const onSubmit = async (data: FormData) => {
     try {
-      // Create form data for Google Apps Script
-      const formData = new FormData();
-      formData.append('name', data.name);
-      formData.append('email', data.email);
-      formData.append('phone', data.phone);
-      formData.append('hearAboutUs', data.hearAboutUs.join(', '));
-      formData.append('otherDetails', data.otherDetails || '');
-      formData.append('comments', data.comments || '');
-
       const response = await fetch('https://script.google.com/macros/s/AKfycbx9jgEsH_gdcQc6P7nqGcDeFjLJ7jMk4xX1AiHPv46K6N9Q7R31FHBmNXanrtYeo8g/exec', {
         method: 'POST',
-        mode: 'no-cors',
-        body: formData,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
       });
       
-      // Since we're using no-cors, we can't check response status
-      // Assume success and close the form
-      setOpen(false);
-      form.reset();
-      setShowOtherInput(false);
+      if (response.ok) {
+        setOpen(false);
+        form.reset();
+        setShowOtherInput(false);
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
     }
