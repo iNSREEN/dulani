@@ -70,23 +70,17 @@ export function InterestForm({ children }: InterestFormProps) {
     console.log('Submitting form data:', data);
     
     try {
-      // Create FormData for Google Apps Script
-      const formData = new window.FormData();
-      formData.append('name', data.name);
-      formData.append('email', data.email);
-      formData.append('phone', data.phone);
-      formData.append('hearAboutUs', JSON.stringify(data.hearAboutUs));
-      formData.append('otherDetails', data.otherDetails || '');
-      formData.append('comments', data.comments || '');
-
       const response = await fetch('https://script.google.com/macros/s/AKfycbx9jgEsH_gdcQc6P7nqGcDeFjLJ7jMk4xX1AiHPv46K6N9Q7R31FHBmNXanrtYeo8g/exec', {
         method: 'POST',
-        body: formData,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
         mode: 'no-cors'
       });
       
-      // With no-cors mode, we can't read the response, so we assume success
-      console.log('Form submitted successfully');
+      // With no-cors mode, we assume success since we can't read the response
+      console.log('Form submitted to Google Apps Script');
       
       toast({
         title: "Success!",
