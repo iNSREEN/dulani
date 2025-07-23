@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -21,6 +22,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/components/ui/use-toast';
 
 const formSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -48,6 +50,8 @@ interface InterestFormProps {
 export function InterestForm({ children }: InterestFormProps) {
   const [open, setOpen] = useState(false);
   const [showOtherInput, setShowOtherInput] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -62,6 +66,9 @@ export function InterestForm({ children }: InterestFormProps) {
   });
 
   const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    console.log('Submitting form data:', data);
+    
     try {
       const response = await fetch('https://script.google.com/macros/s/AKfycbx9jgEsH_gdcQc6P7nqGcDeFjLJ7jMk4xX1AiHPv46K6N9Q7R31FHBmNXanrtYeo8g/exec', {
         method: 'POST',
@@ -71,13 +78,38 @@ export function InterestForm({ children }: InterestFormProps) {
         body: JSON.stringify(data),
       });
       
+      console.log('Response status:', response.status);
+      console.log('Response headers:', response.headers);
+      
       if (response.ok) {
+        const result = await response.json();
+        console.log('Success result:', result);
+        
+        toast({
+          title: "Success!",
+          description: "Thank you for your interest! We'll be in touch soon.",
+        });
+        
         setOpen(false);
         form.reset();
         setShowOtherInput(false);
+      } else {
+        console.error('Response not ok:', response.status, response.statusText);
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
       }
     } catch (error) {
       console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "Failed to submit form. Please check your connection and try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -227,11 +259,12 @@ export function InterestForm({ children }: InterestFormProps) {
                 type="button"
                 variant="outline"
                 onClick={() => setOpen(false)}
+                disabled={isSubmitting}
               >
                 Cancel
               </Button>
-              <Button type="submit">
-                Submit
+              <Button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Submitting...' : 'Submit'}
               </Button>
             </div>
           </form>
