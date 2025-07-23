@@ -24,18 +24,9 @@ const ContactSection = () => {
   ];
 
   return (
-    <>
-      {/* Circular Pattern Divider */}
-      <div className="w-full h-20 relative overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center space-x-6">
-          <div className="w-8 h-8 border-2 border-primary/30 rounded-full"></div>
-          <div className="w-12 h-12 border-2 border-secondary/40 rounded-full bg-secondary/10"></div>
-          <div className="w-8 h-8 border-2 border-primary/30 rounded-full"></div>
-        </div>
-      </div>
-      
-      <section id="contact" className="py-20 relative overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent"></div>
+      <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Get in <span className="text-primary">Touch</span>
@@ -72,7 +63,6 @@ const ContactSection = () => {
         </div>
       </div>
     </section>
-    </>
   );
 };
 

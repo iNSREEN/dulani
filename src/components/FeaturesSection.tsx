@@ -20,16 +20,8 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <>
-      {/* Wave Pattern Divider */}
-      <div className="w-full h-16 relative overflow-hidden">
-        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,60 C300,20 600,100 900,60 C1050,30 1150,90 1200,60 L1200,120 L0,120 Z" 
-                fill="currentColor" className="text-primary/10"></path>
-        </svg>
-      </div>
-      
-      <section id="features" className="py-20 relative overflow-hidden">
+    <section id="features" className="py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5"></div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -63,7 +55,6 @@ const FeaturesSection = () => {
         </div>
       </div>
     </section>
-    </>
   );
 };
 

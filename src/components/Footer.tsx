@@ -1,10 +1,6 @@
 const Footer = () => {
   return (
-    <>
-      {/* Gradient Line Divider */}
-      <div className="w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
-      
-      <footer className="bg-secondary text-secondary-foreground py-12 relative overflow-hidden">
+    <footer className="bg-secondary text-secondary-foreground py-12 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Logo and Brand - Left Side */}
@@ -26,7 +22,6 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </>
   );
 };
 

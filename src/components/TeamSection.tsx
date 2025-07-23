@@ -28,17 +28,8 @@ const TeamSection = () => {
   ];
 
   return (
-    <>
-      {/* Diamond Pattern Divider */}
-      <div className="w-full h-16 relative overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center space-x-8">
-          <div className="w-4 h-4 bg-gradient-to-br from-primary to-secondary transform rotate-45 opacity-40"></div>
-          <div className="w-6 h-6 bg-gradient-to-br from-secondary to-primary transform rotate-45 opacity-60"></div>
-          <div className="w-4 h-4 bg-gradient-to-br from-primary to-secondary transform rotate-45 opacity-40"></div>
-        </div>
-      </div>
-      
-      <section id="team" className="py-20 bg-muted/30 relative overflow-hidden">
+    <section id="team" className="py-20 bg-gradient-to-t from-background via-muted/10 to-background relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-primary/5 to-transparent"></div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -90,7 +81,6 @@ const TeamSection = () => {
         </div>
       </div>
     </section>
-    </>
   );
 };
 
