@@ -20,9 +20,8 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section id="features" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5"></div>
-      <div className="container mx-auto px-4">
+    <section id="features" className="py-20 bg-background relative overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             <span className="text-primary">Dulani's</span> Features
