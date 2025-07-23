@@ -8,7 +8,7 @@ const TeamSection = () => {
     {
       name: "Nsreen Alfaifi", 
       roles: ["Software developer", "Quality Assurance Engineer", "Researcher", "Technical Manager"],
-      image: "/lovable-uploads/eacd6294-93cc-48d5-89d1-626cdbf68c5c.png"
+      image: "/lovable-uploads/abf50def-8340-4f0f-831e-c1e73e5b3ec1.png"
     },
     {
       name: "Shekha Alabduslam",
