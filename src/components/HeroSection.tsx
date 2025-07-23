@@ -23,7 +23,7 @@ const HeroSection = () => {
             <Button 
               variant="demo" 
               className="text-base sm:text-lg w-full sm:w-auto"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => window.open('mailto:Lujain@dulanii.com?subject=Book a Demo Request&body=Hi, I would like to book a demo for Dulani.', '_blank')}
             >
               Book a Demo
             </Button>
