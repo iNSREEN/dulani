@@ -1,4 +1,4 @@
-import { Brain, Eye, Users } from 'lucide-react';
+import { Brain, ScanLine, Users } from 'lucide-react';
 
 const FeaturesSection = () => {
   const features = [
@@ -9,7 +9,7 @@ const FeaturesSection = () => {
       gradient: "from-primary/20 to-primary/10"
     },
     {
-      icon: Eye,
+      icon: ScanLine,
       title: "AR Visual Guidance", 
       description: "Interactive directions overlaid on your surroundings.",
       gradient: "from-secondary/20 to-secondary/10"
