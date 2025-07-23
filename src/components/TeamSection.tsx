@@ -39,21 +39,21 @@ const TeamSection = () => {
       <div className="absolute top-32 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl transform -translate-x-1/2"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl transform translate-x-1/3"></div>
       
-      <div className="container mx-auto px-4 relative z-10 pt-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Meet Our <span className="bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">Experts</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-lg sm:text-xl text-muted-foreground">
             A talented team driving innovation in AI-powered navigation
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="group bg-card/90 backdrop-blur-sm rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-border/30 hover:border-primary/20 relative overflow-hidden"
+              className="group bg-card/90 backdrop-blur-sm rounded-2xl md:rounded-3xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-border/30 hover:border-primary/20 relative overflow-hidden"
             >
               {/* Card glow effect */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -68,13 +68,13 @@ const TeamSection = () => {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-24 h-24 rounded-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-300"
+                      className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                 </div>
 
                 {/* Name */}
-                <h3 className="text-lg font-bold text-secondary text-center mb-2 group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-base sm:text-lg font-bold text-secondary text-center mb-2 group-hover:text-primary transition-colors duration-300">
                   {member.name}
                 </h3>
 

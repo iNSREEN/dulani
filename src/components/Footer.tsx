@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="bg-secondary text-secondary-foreground py-12 relative overflow-hidden">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Logo and Brand - Left Side */}
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
