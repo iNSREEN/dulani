@@ -18,7 +18,7 @@ const TeamSection = () => {
     {
       name: "Shaden Almashuq",
       roles: ["XR developer", "AI specialist", "UI/UX designer", "3D Designer"],
-      image: "/lovable-uploads/eacd6294-93cc-48d5-89d1-626cdbf68c5c.png"
+      image: "/lovable-uploads/b3dc2372-c162-466a-8fe0-99bb7e11bac4.png"
     },
     {
       name: "Lujain Alahrbi",
