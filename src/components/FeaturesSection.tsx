@@ -5,20 +5,17 @@ const FeaturesSection = () => {
     {
       icon: Cpu,
       title: "AI-Powered Navigation",
-      description: "Advanced AI algorithms analyze real-time data to calculate optimal paths",
-      gradient: "from-primary/20 to-primary/10"
+      description: "Advanced AI algorithms analyze real-time data to calculate optimal paths"
     },
     {
       icon: ScanLine,
       title: "AR Visual Guidance", 
-      description: "Interactive directions overlaid on your surroundings.",
-      gradient: "from-secondary/20 to-secondary/10"
+      description: "Interactive directions overlaid on your surroundings."
     },
     {
       icon: Users,
       title: "Crowd Management",
-      description: "Enhance visitor experience and avoid crowds using AI and AR to reach destinations faster and smoother",
-      gradient: "from-primary/20 to-secondary/20"
+      description: "Enhance visitor experience and avoid crowds using AI and AR to reach destinations faster and smoother"
     }
   ];
 
@@ -48,8 +45,8 @@ const FeaturesSection = () => {
                 key={index}
                 className="group p-8 bg-card rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-border/50"
               >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary via-primary/80 to-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/25">
+                  <Icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">
                   {feature.title}
