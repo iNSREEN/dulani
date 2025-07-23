@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { InterestForm } from '@/components/InterestForm';
 
 const HeroSection = () => {
   return (
@@ -20,13 +21,23 @@ const HeroSection = () => {
                 Transform visitor experiences with AI-powered navigation, augmented reality guidance, and real-time analytics.
               </p>
             </div>
-            <Button 
-              variant="demo" 
-              className="text-base sm:text-lg w-full sm:w-auto"
-              onClick={() => window.open('mailto:Lujain@dulanii.com?subject=Book a Demo Request&body=Hi, I would like to book a demo for Dulani.', '_blank')}
-            >
-              Book a Demo
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <Button 
+                variant="demo" 
+                className="text-base sm:text-lg w-full sm:w-auto"
+                onClick={() => window.open('mailto:Lujain@dulanii.com?subject=Book a Demo Request&body=Hi, I would like to book a demo for Dulani.', '_blank')}
+              >
+                Book a Demo
+              </Button>
+              <InterestForm>
+                <Button 
+                  variant="outline" 
+                  className="text-base sm:text-lg w-full sm:w-auto border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                >
+                  Join Our Interest List
+                </Button>
+              </InterestForm>
+            </div>
           </div>
 
           {/* Right Side - Mobile Screenshots */}
