@@ -66,7 +66,7 @@ const HeroSection = () => {
                   <div className="w-full h-full bg-white rounded-[12px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[22px] overflow-hidden relative">
                     {/* App Content - AR Navigation Screenshot */}
                     <img 
-                      src="/lovable-uploads/bfcd5964-9fc8-4d43-9ba8-a777f2afc8b7.png" 
+                      src="/lovable-uploads/f42455af-fb6f-4a55-9f04-a67f92fb397c.png" 
                       alt="Dulani AR Navigation"
                       className="w-full h-full object-cover"
                     />
