@@ -65,14 +65,6 @@ const ContactSection = () => {
             })}
           </div>
 
-          <div className="text-center">
-            <Button 
-              variant="demo"
-              onClick={() => window.open('mailto:Lujain@dulanii.com', '_blank')}
-            >
-              Start Your Journey with Dulani
-            </Button>
-          </div>
         </div>
       </div>
     </section>
