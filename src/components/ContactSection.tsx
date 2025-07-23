@@ -24,22 +24,12 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 -mt-6 relative overflow-hidden">
-      {/* Curved organic transition */}
-      <svg className="absolute top-0 left-0 w-full h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,80 C200,20 400,100 600,60 C800,20 1000,80 1200,40 L1200,120 L0,120 Z" 
-              fill="currentColor" className="text-secondary/10"></path>
-      </svg>
-      
-      {/* Flowing background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/5 to-primary/10"></div>
-      <div className="absolute top-20 left-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 right-20 w-32 h-32 bg-primary/15 rounded-full blur-2xl"></div>
-      
-      <div className="container mx-auto px-4 relative z-10 pt-8">
+    <section id="contact" className="py-20 bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent"></div>
+      <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Get in <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Touch</span>
+            Get in <span className="text-primary">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Ready to transform your navigation experience? Contact us today
@@ -54,26 +44,22 @@ const ContactSection = () => {
                 <a
                   key={index}
                   href={contact.href}
-                  className="group relative p-8 bg-card/80 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 border border-border/50 hover:border-primary/30 text-center overflow-hidden"
+                  className="group p-8 bg-card rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-border/50 text-center"
                 >
-                  {/* Animated background */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                      <Icon className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-300" />
-                    </div>
-                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
-                      {contact.label}
-                    </h3>
-                    <p className="text-muted-foreground group-hover:text-secondary transition-colors duration-300">
-                      {contact.value}
-                    </p>
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                    <Icon className="w-8 h-8 text-primary group-hover:text-primary-foreground" />
                   </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">
+                    {contact.label}
+                  </h3>
+                  <p className="text-muted-foreground group-hover:text-primary transition-colors duration-300">
+                    {contact.value}
+                  </p>
                 </a>
               );
             })}
           </div>
+
         </div>
       </div>
     </section>
