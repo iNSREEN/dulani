@@ -7,7 +7,7 @@ const Header = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerHeight = 80; // Account for fixed header height
+      const headerHeight = 60; // Reduced offset for better positioning
       const elementPosition = element.offsetTop - headerHeight;
       window.scrollTo({
         top: elementPosition,
