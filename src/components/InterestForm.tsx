@@ -72,7 +72,7 @@ export function InterestForm({ children }: InterestFormProps) {
     console.log('Submitting form data:', data);
     
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbxyCexEjdwhqsEw-MUjeXpjBuNgYt-JDi5_ARznKrRm5HDqb5ZUVr3UWjJ-FufCOgo/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbwosDB8qNU9L_WVlBS6tbrg60QLcBcI3RO2ch-dgR1kyZH1gQ-gtYsIqxQgv0QR09I/exec', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
