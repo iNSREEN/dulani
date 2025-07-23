@@ -4,20 +4,10 @@ import { InterestForm } from '@/components/InterestForm';
 const HeroSection = () => {
   return (
     <section id="hero" className="pt-16 sm:pt-20 md:pt-24 pb-0 min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-background via-primary/5 to-background">
-      {/* Brand pattern overlay */}
-      <div className="absolute inset-0 opacity-5" 
-           style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "400px", backgroundRepeat: "repeat" }}>
-      </div>
-      
-      {/* Floating geometric shapes with brand pattern */}
+      {/* Floating geometric shapes */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-32 right-16 w-16 h-16 bg-secondary/15 rounded-full blur-lg animate-pulse delay-1000"></div>
       <div className="absolute top-1/3 right-1/4 w-12 h-12 bg-primary/20 rounded-full blur-md animate-pulse delay-500"></div>
-      
-      {/* Brand logo watermark */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5 -z-5">
-        <img src="/lovable-uploads/24037984-72d9-41ea-a970-810925759561.png" alt="Dulani Brand" className="w-full h-full object-contain" />
-      </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 xl:gap-16 items-center">
           {/* Left Side - Text + CTA */}

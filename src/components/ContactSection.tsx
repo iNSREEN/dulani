@@ -31,18 +31,10 @@ const ContactSection = () => {
               fill="currentColor" className="text-secondary/10"></path>
       </svg>
       
-      {/* Flowing background gradient with brand pattern */}
+      {/* Flowing background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/5 to-primary/10"></div>
-      <div className="absolute inset-0 opacity-8" 
-           style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "200px", backgroundRepeat: "repeat" }}>
-      </div>
       <div className="absolute top-20 left-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-10 right-20 w-32 h-32 bg-primary/15 rounded-full blur-2xl"></div>
-      
-      {/* Brand logo watermark */}
-      <div className="absolute bottom-10 left-10 w-16 h-16 opacity-10">
-        <img src="/lovable-uploads/24037984-72d9-41ea-a970-810925759561.png" alt="" className="w-full h-full" />
-      </div>
       
       <div className="container mx-auto px-4 relative z-10 pt-8">
         <div className="text-center mb-16">

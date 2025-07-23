@@ -5,10 +5,12 @@ import FeaturesSection from '@/components/FeaturesSection';
 import TeamSection from '@/components/TeamSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import PageBorders from '@/components/PageBorders';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageBorders />
       <Header />
       <HeroSection />
       <AboutSection />

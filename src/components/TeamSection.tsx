@@ -35,19 +35,9 @@ const TeamSection = () => {
               fill="currentColor" className="text-primary/5"></path>
       </svg>
       
-      {/* Organic background shapes with brand elements */}
+      {/* Organic background shapes */}
       <div className="absolute top-32 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl transform -translate-x-1/2"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl transform translate-x-1/3"></div>
-      
-      {/* Brand pattern in background */}
-      <div className="absolute inset-0 opacity-5" 
-           style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "350px", backgroundRepeat: "repeat" }}>
-      </div>
-      
-      {/* Floating brand accents */}
-      <div className="absolute top-20 right-20 w-10 h-10 opacity-15">
-        <img src="/lovable-uploads/24037984-72d9-41ea-a970-810925759561.png" alt="" className="w-full h-full animate-pulse delay-1000" />
-      </div>
       
       <div className="container mx-auto px-4 relative z-10 pt-8">
         <div className="text-center mb-16">
@@ -65,11 +55,8 @@ const TeamSection = () => {
               key={index}
               className="group bg-card/90 backdrop-blur-sm rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-border/30 hover:border-primary/20 relative overflow-hidden"
             >
-              {/* Card glow effect with brand pattern */}
+              {/* Card glow effect */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 rounded-3xl opacity-5 group-hover:opacity-15 transition-opacity duration-500" 
-                   style={{ backgroundImage: "url('/lovable-uploads/c4d493aa-cd70-4ceb-9e5f-58f86c912550.png')", backgroundSize: "80px", backgroundRepeat: "repeat" }}>
-              </div>
               
               <div className="relative z-10">
                 {/* Circular Image */}
