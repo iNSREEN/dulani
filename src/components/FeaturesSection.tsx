@@ -42,7 +42,7 @@ const FeaturesSection = () => {
             return (
               <div
                 key={index}
-                className="group relative p-8 bg-card/80 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 border border-border/50 hover:border-primary/30 overflow-hidden"
+                className="group relative p-8 bg-card/80 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 border border-border/50 hover:border-primary/30"
               >
                 {/* Card background effect */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

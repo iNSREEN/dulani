@@ -8,6 +8,10 @@ const AboutSection = () => {
               fill="currentColor" className="text-muted/20"></path>
       </svg>
       
+      {/* Floating elements */}
+      <div className="absolute top-40 left-20 w-6 h-6 bg-primary/30 rounded-full animate-pulse delay-700"></div>
+      <div className="absolute bottom-20 right-32 w-8 h-8 bg-secondary/25 rounded-full animate-pulse delay-300"></div>
+      
       <div className="container mx-auto px-4 relative z-10 pt-16">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 animate-fade-in">
