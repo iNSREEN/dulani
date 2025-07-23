@@ -31,6 +31,7 @@ const formSchema = z.object({
   hearAboutUs: z.array(z.string()).min(1, 'Please select at least one option'),
   otherDetails: z.string().optional(),
   comments: z.string().optional(),
+  newsletter: z.boolean().optional(),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -62,6 +63,7 @@ export function InterestForm({ children }: InterestFormProps) {
       hearAboutUs: [],
       otherDetails: '',
       comments: '',
+      newsletter: false,
     },
   });
 
@@ -250,6 +252,26 @@ export function InterestForm({ children }: InterestFormProps) {
                     />
                   </FormControl>
                   <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="newsletter"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>
+                      I'd like to receive the latest updates, news, and promotions
+                    </FormLabel>
+                  </div>
                 </FormItem>
               )}
             />
