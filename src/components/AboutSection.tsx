@@ -1,16 +1,12 @@
-import patternDivider from "@/assets/pattern-divider.png";
-
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 -mt-16 relative overflow-hidden">
-      {/* Pattern divider at top */}
-      <div className="absolute top-0 left-0 w-full h-32 opacity-20">
-        <img 
-          src={patternDivider} 
-          alt="" 
-          className="w-full h-full object-cover object-center" 
-        />
-      </div>
+      {/* Curved top section that overlaps with hero */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-transparent via-muted/10 to-muted/30"></div>
+      <svg className="absolute top-0 left-0 w-full h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C300,60 600,120 900,80 C1050,50 1150,100 1200,60 L1200,0 Z" 
+              fill="currentColor" className="text-muted/20"></path>
+      </svg>
       
       {/* Floating elements */}
       <div className="absolute top-40 left-20 w-6 h-6 bg-primary/30 rounded-full animate-pulse delay-700"></div>
@@ -27,15 +23,6 @@ const AboutSection = () => {
             guidance, reduces congestion, and enhances accessibility.
           </p>
         </div>
-      </div>
-
-      {/* Pattern divider at bottom */}
-      <div className="absolute bottom-0 left-0 w-full h-32 opacity-20 rotate-180">
-        <img 
-          src={patternDivider} 
-          alt="" 
-          className="w-full h-full object-cover object-center" 
-        />
       </div>
     </section>
   );
