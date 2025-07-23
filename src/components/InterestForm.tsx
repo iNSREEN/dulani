@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import formPattern from '@/assets/form-pattern.png';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -130,10 +131,21 @@ export function InterestForm({ children }: InterestFormProps) {
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto mx-4">
-        <DialogHeader>
+      <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto mx-4 relative">
+        {/* Pattern Background */}
+        <div 
+          className="absolute inset-0 rounded-lg opacity-5"
+          style={{
+            backgroundImage: `url(${formPattern})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+        <div className="relative z-10">
+          <DialogHeader>
           <DialogTitle>We'd Love to Hear From You!</DialogTitle>
-        </DialogHeader>
+          </DialogHeader>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
             <FormField
@@ -281,6 +293,7 @@ export function InterestForm({ children }: InterestFormProps) {
             </div>
           </form>
         </Form>
+        </div>
       </DialogContent>
     </Dialog>
   );
