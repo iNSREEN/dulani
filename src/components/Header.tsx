@@ -18,7 +18,6 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: 'Dulani', id: 'hero' },
     { label: 'About', id: 'about' },
     { label: 'Features', id: 'features' },
     { label: 'Team', id: 'team' },
@@ -30,14 +29,17 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <button 
+            onClick={() => scrollToSection('hero')}
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200"
+          >
             <img 
               src="/lovable-uploads/24037984-72d9-41ea-a970-810925759561.png" 
               alt="Dulani Logo" 
               className="w-10 h-10"
             />
             <span className="text-2xl font-bold text-primary">Dulani</span>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
