@@ -17,7 +17,7 @@ const TeamSection = () => {
     },
     {
       name: "Shaden Almashuq",
-      roles: ["XR developer", "AI specialist", "UI/UX designer", "3D Designer"],
+      roles: ["AI Specialist", "UI/UX Designer", "Project Manager", "Business Developer"],
       image: "/lovable-uploads/b3dc2372-c162-466a-8fe0-99bb7e11bac4.png"
     },
     {
