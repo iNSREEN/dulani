@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: 'Home', id: 'hero' },
+    { label: 'Dulani', id: 'hero' },
     { label: 'About', id: 'about' },
     { label: 'Features', id: 'features' },
     { label: 'Team', id: 'team' },

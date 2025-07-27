@@ -21,20 +21,13 @@ const HeroSection = () => {
                  Transform visitor experiences and avoid crowds with AI-powered navigation and augmented reality guidance.
                </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button 
-                variant="demo" 
-                className="text-base sm:text-lg w-full sm:w-auto"
-                onClick={() => window.open('mailto:Lujain@dulanii.com?subject=Book a Demo Request&body=Hi, I would like to book a demo for Dulani.', '_blank')}
-              >
-                Book a Demo
-              </Button>
+            <div className="flex justify-center lg:justify-start">
               <InterestForm>
                 <Button 
-                  variant="outline" 
-                  className="text-base sm:text-lg w-full sm:w-auto border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  variant="demo" 
+                  className="text-base sm:text-lg w-full sm:w-auto"
                 >
-                  Join Our Interest List
+                  Book a Demo
                 </Button>
               </InterestForm>
             </div>
