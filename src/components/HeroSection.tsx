@@ -1,7 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { InterestForm } from '@/components/InterestForm';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const HeroSection = () => {
+  const { t } = useLanguage();
   return (
     <section id="hero" className="pt-16 sm:pt-20 md:pt-24 pb-0 min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-background via-primary/5 to-background">
       {/* Floating geometric shapes */}
@@ -13,22 +15,25 @@ const HeroSection = () => {
           {/* Left Side - Text + CTA */}
           <div className="space-y-6 sm:space-y-8 text-center lg:text-left order-2 lg:order-1">
             <div className="space-y-4 sm:space-y-6">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                <span className="text-primary">Dulani</span>{" "}
-                <span className="text-foreground">Your Next Guide – Smarter, Faster, and More Interactive!</span>
-              </h1>
-               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-full lg:max-w-lg mx-auto lg:mx-0">
-                 Transform visitor experiences and avoid crowds with AI-powered navigation and augmented reality guidance.
-               </p>
+               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                 <span className="text-foreground">{t('heroTitle')} </span>
+                 <span className="text-primary">Dulani</span>
+               </h1>
+               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-muted-foreground mb-4">
+                 {t('heroSubtitle')}
+               </h2>
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-full lg:max-w-lg mx-auto lg:mx-0">
+                  {t('heroDescription')}
+                </p>
             </div>
             <div className="flex justify-center lg:justify-start">
               <InterestForm>
                 <Button 
                   variant="demo" 
                   className="text-base sm:text-lg w-full sm:w-auto"
-                >
-                  Book a Demo
-                </Button>
+                 >
+                   {t('bookDemo')}
+                 </Button>
               </InterestForm>
             </div>
           </div>

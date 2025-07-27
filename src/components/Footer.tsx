@@ -1,4 +1,7 @@
+import { useLanguage } from '@/contexts/LanguageContext';
+
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer className="bg-secondary text-secondary-foreground py-12 relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,9 +18,9 @@ const Footer = () => {
 
             {/* Copyright - Right Side */}
             <div className="text-center md:text-right">
-              <p className="text-secondary-foreground/80">
-                © 2024 Dulani. All rights reserved.
-              </p>
+               <p className="text-secondary-foreground/80">
+                 © 2024 Dulani. {t('allRightsReserved')}
+               </p>
             </div>
           </div>
         </div>

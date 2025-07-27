@@ -1,21 +1,23 @@
 import { Cpu, ScanLine, Users } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const FeaturesSection = () => {
+  const { t } = useLanguage();
   const features = [
     {
       icon: Cpu,
-      title: "AI-Powered Navigation",
-      description: "Advanced AI algorithms analyze real-time data to calculate optimal paths"
+      title: t('aiNavigationTitle'),
+      description: t('aiNavigationDesc')
     },
     {
       icon: ScanLine,
-      title: "AR Visual Guidance", 
-      description: "Interactive directions overlaid on your surroundings."
+      title: t('arExperienceTitle'), 
+      description: t('arExperienceDesc')
     },
     {
       icon: Users,
-      title: "Crowd Management",
-      description: "Enhance visitor experience and avoid crowds using AI and AR to reach destinations faster and smoother"
+      title: t('realTimeAnalyticsTitle'),
+      description: t('realTimeAnalyticsDesc')
     }
   ];
 
@@ -28,9 +30,9 @@ const FeaturesSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Dulani's</span> Features
-          </h2>
+           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+             <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Dulani's</span> {t('featuresTitle')}
+           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground">
             Cutting-edge technology for seamless navigation experiences
           </p>

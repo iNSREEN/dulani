@@ -1,4 +1,7 @@
+import { useLanguage } from '@/contexts/LanguageContext';
+
 const TeamSection = () => {
+  const { t } = useLanguage();
   const teamMembers = [
     {
       name: "Fatima Aldukkan",
@@ -41,12 +44,12 @@ const TeamSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Meet Our <span className="bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">Experts</span>
-          </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground">
-            A talented team driving innovation in AI-powered navigation
-          </p>
+           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+             {t('teamTitle')} <span className="bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">Experts</span>
+           </h2>
+           <p className="text-lg sm:text-xl text-muted-foreground">
+             A talented team driving innovation in AI-powered navigation
+           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">

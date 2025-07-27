@@ -1,23 +1,25 @@
 import { Mail, Phone, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ContactSection = () => {
+  const { t } = useLanguage();
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
+      label: t('email'),
       value: "Lujain@dulanii.com",
       href: "mailto:Lujain@dulanii.com"
     },
     {
       icon: Phone,
-      label: "Phone", 
+      label: t('phone'), 
       value: "0551201145",
       href: "tel:0551201145"
     },
     {
       icon: Linkedin,
-      label: "LinkedIn",
+      label: t('linkedin'),
       value: "Dulani",
       href: "https://linkedin.com/company/dulani"
     }
@@ -38,12 +40,12 @@ const ContactSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Get in <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Touch</span>
-          </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground px-4">
-            Ready to transform your navigation experience? Contact us today
-          </p>
+           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+             {t('contactTitle')} <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Touch</span>
+           </h2>
+           <p className="text-lg sm:text-xl text-muted-foreground px-4">
+             {t('contactDescription')}
+           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
