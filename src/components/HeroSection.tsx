@@ -27,7 +27,7 @@ const HeroSection = () => {
                   variant="demo" 
                   className="text-base sm:text-lg w-full sm:w-auto"
                 >
-                  Book a Demo
+                  Join to our Interest list
                 </Button>
               </InterestForm>
             </div>
