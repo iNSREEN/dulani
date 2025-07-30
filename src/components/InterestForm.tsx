@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -24,24 +25,24 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
 
-const formSchema = z.object({
-  name: z.string().min(1, 'Name is required'),
-  email: z.string().email('Please enter a valid email address'),
-  phone: z.string().min(1, 'Phone number is required'),
-  hearAboutUs: z.array(z.string()).min(1, 'Please select at least one option'),
+const createFormSchema = (language: string) => z.object({
+  name: z.string().min(1, language === 'en' ? 'Name is required' : 'الاسم مطلوب'),
+  email: z.string().email(language === 'en' ? 'Please enter a valid email address' : 'يرجى إدخال عنوان بريد إلكتروني صحيح'),
+  phone: z.string().min(1, language === 'en' ? 'Phone number is required' : 'رقم الهاتف مطلوب'),
+  hearAboutUs: z.array(z.string()).min(1, language === 'en' ? 'Please select at least one option' : 'يرجى اختيار خيار واحد على الأقل'),
   otherDetails: z.string().optional(),
   comments: z.string().optional(),
   newsletter: z.boolean().optional(),
 });
 
-type FormData = z.infer<typeof formSchema>;
+type FormData = z.infer<ReturnType<typeof createFormSchema>>;
 
-const hearAboutUsOptions = [
-  { id: 'social-media', label: 'Social Media' },
-  { id: 'friends-family', label: 'Friends/Family' },
-  { id: 'advertisements', label: 'Advertisements' },
-  { id: 'search-engine', label: 'Search Engine (Google, Bing, etc.)' },
-  { id: 'other', label: 'Other' },
+const createHearAboutUsOptions = (language: string) => [
+  { id: 'social-media', label: language === 'en' ? 'Social Media' : 'وسائل التواصل الاجتماعي' },
+  { id: 'friends-family', label: language === 'en' ? 'Friends/Family' : 'الأصدقاء/العائلة' },
+  { id: 'advertisements', label: language === 'en' ? 'Advertisements' : 'الإعلانات' },
+  { id: 'search-engine', label: language === 'en' ? 'Search Engine (Google, Bing, etc.)' : 'محرك البحث (جوجل، بينغ، إلخ)' },
+  { id: 'other', label: language === 'en' ? 'Other' : 'أخرى' },
 ];
 
 interface InterestFormProps {
@@ -53,6 +54,10 @@ export function InterestForm({ children }: InterestFormProps) {
   const [showOtherInput, setShowOtherInput] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const { language } = useLanguage();
+  
+  const formSchema = createFormSchema(language);
+  const hearAboutUsOptions = createHearAboutUsOptions(language);
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -85,8 +90,8 @@ export function InterestForm({ children }: InterestFormProps) {
       console.log('Form submitted successfully');
       
       toast({
-        title: "Success!",
-        description: "Thank you for your interest! We'll be in touch soon.",
+        title: language === 'en' ? "Success!" : "نجح!",
+        description: language === 'en' ? "Thank you for your interest! We'll be in touch soon." : "شكراً لاهتمامك! سنتواصل معك قريباً.",
       });
       
       setOpen(false);
@@ -95,8 +100,8 @@ export function InterestForm({ children }: InterestFormProps) {
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
-        title: "Error",
-        description: "Failed to submit form. Please check your connection and try again.",
+        title: language === 'en' ? "Error" : "خطأ",
+        description: language === 'en' ? "Failed to submit form. Please check your connection and try again." : "فشل في إرسال النموذج. يرجى التحقق من اتصالك وإعادة المحاولة.",
         variant: "destructive",
       });
     } finally {
@@ -132,7 +137,9 @@ export function InterestForm({ children }: InterestFormProps) {
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto mx-4">
         <DialogHeader>
-          <DialogTitle style={{ color: '#001A6E' }}>We'd Love to Hear From You!</DialogTitle>
+          <DialogTitle style={{ color: '#001A6E' }}>
+            {language === 'en' ? "We'd Love to Hear From You!" : "نحب أن نسمع منك!"}
+          </DialogTitle>
         </DialogHeader>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
@@ -141,9 +148,9 @@ export function InterestForm({ children }: InterestFormProps) {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>{language === 'en' ? 'Name' : 'الاسم'}</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your full name" {...field} />
+                    <Input placeholder={language === 'en' ? 'Your full name' : 'اسمك الكامل'} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -155,9 +162,9 @@ export function InterestForm({ children }: InterestFormProps) {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email Address</FormLabel>
+                  <FormLabel>{language === 'en' ? 'Email Address' : 'عنوان البريد الإلكتروني'}</FormLabel>
                   <FormControl>
-                    <Input placeholder="your.email@example.com" {...field} />
+                    <Input placeholder={language === 'en' ? 'your.email@example.com' : 'البريد.الالكتروني@مثال.com'} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -169,7 +176,7 @@ export function InterestForm({ children }: InterestFormProps) {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
+                  <FormLabel>{language === 'en' ? 'Phone Number' : 'رقم الهاتف'}</FormLabel>
                   <FormControl>
                     <Input placeholder="+966 5X XXX XXXX" {...field} />
                   </FormControl>
@@ -183,10 +190,10 @@ export function InterestForm({ children }: InterestFormProps) {
               name="hearAboutUs"
               render={() => (
                 <FormItem>
-                  <FormLabel>How did you hear about us?</FormLabel>
+                  <FormLabel>{language === 'en' ? 'How did you hear about us?' : 'كيف سمعت عنا؟'}</FormLabel>
                   <div className="space-y-3">
                     {hearAboutUsOptions.map((option) => (
-                      <div key={option.id} className="flex items-center space-x-2">
+                      <div key={option.id} className={`flex items-center ${language === 'ar' ? 'space-x-reverse' : ''} space-x-2`}>
                         <Checkbox
                           id={option.id}
                           onCheckedChange={(checked) => 
@@ -213,10 +220,10 @@ export function InterestForm({ children }: InterestFormProps) {
                 name="otherDetails"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Please specify</FormLabel>
+                    <FormLabel>{language === 'en' ? 'Please specify' : 'يرجى التوضيح'}</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="Tell us how you heard about us..."
+                        placeholder={language === 'en' ? 'Tell us how you heard about us...' : 'أخبرنا كيف سمعت عنا...'}
                         className="resize-none"
                         {...field}
                       />
@@ -232,10 +239,10 @@ export function InterestForm({ children }: InterestFormProps) {
               name="comments"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Comments</FormLabel>
+                  <FormLabel>{language === 'en' ? 'Comments' : 'التعليقات'}</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Any additional comments or questions..."
+                      placeholder={language === 'en' ? 'Any additional comments or questions...' : 'أي تعليقات أو أسئلة إضافية...'}
                       className="resize-none"
                       {...field}
                     />
@@ -249,7 +256,7 @@ export function InterestForm({ children }: InterestFormProps) {
               control={form.control}
               name="newsletter"
               render={({ field }) => (
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                <FormItem className={`flex flex-row items-start ${language === 'ar' ? 'space-x-reverse' : ''} space-x-3 space-y-0`}>
                   <FormControl>
                     <Checkbox
                       checked={field.value}
@@ -258,7 +265,7 @@ export function InterestForm({ children }: InterestFormProps) {
                   </FormControl>
                   <div className="space-y-1 leading-none">
                     <label className="text-sm leading-none">
-                      I'd like to receive the latest updates, news, and promotions
+                      {language === 'en' ? "I'd like to receive the latest updates, news, and promotions" : 'أود تلقي آخر التحديثات والأخبار والعروض الترويجية'}
                     </label>
                   </div>
                 </FormItem>
@@ -273,10 +280,10 @@ export function InterestForm({ children }: InterestFormProps) {
                 disabled={isSubmitting}
                 className="w-full sm:w-auto hover:bg-gray-100 hover:text-gray-700"
               >
-                Cancel
+                {language === 'en' ? 'Cancel' : 'إلغاء'}
               </Button>
               <Button type="submit" disabled={isSubmitting} className="w-full sm:w-auto">
-                {isSubmitting ? 'Submitting...' : 'Submit'}
+                {isSubmitting ? (language === 'en' ? 'Submitting...' : 'جاري الإرسال...') : (language === 'en' ? 'Submit' : 'إرسال')}
               </Button>
             </div>
           </form>
