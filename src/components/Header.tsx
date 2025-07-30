@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -17,10 +19,26 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const handleNavigation = (item: { label: string; id: string; isPage?: boolean }) => {
+    if (item.isPage) {
+      navigate(`/${item.id}`);
+    } else {
+      // If we're not on the home page, navigate there first
+      if (window.location.pathname !== '/') {
+        navigate('/');
+        // Wait for navigation to complete, then scroll
+        setTimeout(() => scrollToSection(item.id), 100);
+      } else {
+        scrollToSection(item.id);
+      }
+    }
+    setIsMenuOpen(false);
+  };
+
   const navItems = [
     { label: 'About', id: 'about' },
     { label: 'Features', id: 'features' },
-    { label: 'Team', id: 'team' },
+    { label: 'Team', id: 'team', isPage: true },
     { label: 'Contact', id: 'contact' },
   ];
 
@@ -30,7 +48,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button 
-            onClick={() => scrollToSection('hero')}
+            onClick={() => navigate('/')}
             className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200"
           >
             <img 
@@ -46,7 +64,7 @@ const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => handleNavigation(item)}
                 className="relative text-foreground hover:text-primary transition-colors duration-200 group font-bold"
               >
                 {item.label}
@@ -71,7 +89,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => handleNavigation(item)}
                   className="text-left text-foreground hover:text-primary transition-colors duration-200 font-bold"
                 >
                   {item.label}
