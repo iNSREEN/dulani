@@ -20,7 +20,7 @@ const translations = {
     // Hero Section
     heroTitle: "Dulani Your Next Guide – Smarter, Faster, and More Interactive!",
     heroDescription: "Transform visitor experiences and avoid crowds with Augmented Reality guidance and AI-powered navigation",
-    joinInterestList: "Join our Interest list",
+    joinInterestList: "Join Us",
     
     // About Section
     whatIsDulani: "What is Dulani?",
@@ -55,7 +55,7 @@ const translations = {
     // Hero Section
     heroTitle: "دلني مرشدك القادم – أذكى، أسرع، وأكثر تفاعلاً",
     heroDescription: "حوّل تجارب الزوار وتجنب الزحام باستخدام إرشادات الواقع المعزز والتنقل المدعوم بالذكاء الاصطناعي",
-    joinInterestList: "هل أنت مهتم؟ انضم إلينا",
+    joinInterestList: "انضم إلينا",
     
     // About Section
     whatIsDulani: "ما هو دلني؟",
