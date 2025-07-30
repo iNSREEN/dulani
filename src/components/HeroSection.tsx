@@ -21,7 +21,12 @@ const HeroSection = () => {
                     <span style={{background: 'linear-gradient(to right, #009990, #001A6E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>Dulani</span>{' '}
                     {t('heroTitle').replace('Dulani', '').trim()}
                   </>
-                ) : t('heroTitle')}
+                ) : (
+                  <>
+                    <span style={{background: 'linear-gradient(to right, #009990, #001A6E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>دلني</span>{' '}
+                    {t('heroTitle').replace('دلني', '').trim()}
+                  </>
+                )}
               </h1>
                 <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-full lg:max-w-lg mx-auto lg:mx-0">
                  {t('heroDescription')}

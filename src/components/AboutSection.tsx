@@ -20,7 +20,9 @@ const AboutSection = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 md:mb-8 animate-fade-in">
             {language === 'en' ? (
               <>What is <span style={{background: 'linear-gradient(to right, #009990, #001A6E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>Dulani</span>?</>
-            ) : t('whatIsDulani')}
+            ) : (
+              <>ما هو <span style={{background: 'linear-gradient(to right, #009990, #001A6E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>دلني</span>؟</>
+            )}
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed animate-fade-in delay-200 px-4">
             Dulani is a solution that transforms visitor experiences. 

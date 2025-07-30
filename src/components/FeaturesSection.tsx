@@ -33,7 +33,9 @@ const FeaturesSection = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             {language === 'en' ? (
               <>Dulani's <span style={{background: 'linear-gradient(to right, #009990, #001A6E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>Features</span></>
-            ) : t('dulaniFeatures')}
+            ) : (
+              <><span style={{background: 'linear-gradient(to right, #009990, #001A6E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>مميزات</span> دلني</>
+            )}
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground">
             {t('cuttingEdgeTech')}

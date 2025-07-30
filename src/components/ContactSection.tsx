@@ -43,7 +43,9 @@ const ContactSection = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             {language === 'en' ? (
               <>Get in <span style={{background: 'linear-gradient(to right, #009990, #001A6E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>Touch</span></>
-            ) : t('getInTouch')}
+            ) : (
+              <><span style={{background: 'linear-gradient(to right, #009990, #001A6E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>تواصل</span> معنا</>
+            )}
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground px-4">
             {t('improveNavigation')}
