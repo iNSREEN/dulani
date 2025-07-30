@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 xl:gap-16 items-center">
           {/* Left Side - Text + CTA */}
-          <div className="space-y-6 sm:space-y-8 text-center lg:text-left order-2 lg:order-1">
+          <div className="space-y-6 sm:space-y-8 text-center lg:text-left rtl:lg:text-right order-2 lg:order-1">
             <div className="space-y-4 sm:space-y-6">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                 {t('heroTitle')}
