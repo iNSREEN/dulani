@@ -24,6 +24,7 @@ const translations = {
     
     // About Section
     whatIsDulani: "What is Dulani?",
+    aboutDescription: "Dulani is a solution that transforms visitor experiences. Using augmented reality (AR) and real-time AI analytics, it provides seamless guidance, reduces congestion, and enhances accessibility.",
     
     // Features Section
     dulaniFeatures: "Dulani's Features",
@@ -58,6 +59,7 @@ const translations = {
     
     // About Section
     whatIsDulani: "ما هو دلني؟",
+    aboutDescription: "دلني هو حل مبتكر يثري تجربة الزوار بشكل رائع. من خلال استخدام الواقع المعزز والتحليلات الذكية في الوقت الفعلي، يقدم إرشادات سلسة تسهل التنقل، وتساهم في تقليل الازدحام، وتعزز إمكانية الوصول للجميع",
     
     // Features Section
     dulaniFeatures: "مميزات دلني",

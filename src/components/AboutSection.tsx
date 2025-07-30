@@ -25,9 +25,7 @@ const AboutSection = () => {
             )}
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed animate-fade-in delay-200 px-4">
-            Dulani is a solution that transforms visitor experiences. 
-            Using augmented reality (AR) and real-time AI analytics, it provides seamless 
-            guidance, reduces congestion, and enhances accessibility.
+            {t('aboutDescription')}
           </p>
         </div>
       </div>
