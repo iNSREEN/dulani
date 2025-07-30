@@ -47,7 +47,7 @@ const translations = {
     // Header
     dulani: "دلني",
     about: "عن دلني",
-    features: "مميزتنا",
+    features: "مميزاتنا",
     team: "الفريق",
     contact: "تواصل معنا",
     
