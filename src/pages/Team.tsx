@@ -6,7 +6,7 @@ const Team = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
-      <div className="flex-grow">
+      <div className="flex-grow flex items-center justify-center">
         <TeamSection />
       </div>
       <Footer />
