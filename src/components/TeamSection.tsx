@@ -28,7 +28,12 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="team" className="py-12 sm:py-16 md:py-20 lg:py-24 relative">
+    <section id="team" className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
+      {/* Soft background elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background to-background/95"></div>
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/3 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary/4 rounded-full blur-3xl"></div>
+      <div className="absolute top-3/4 left-3/4 w-48 h-48 bg-primary/2 rounded-full blur-2xl"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8">
         <div className="text-center mb-12 md:mb-16">
