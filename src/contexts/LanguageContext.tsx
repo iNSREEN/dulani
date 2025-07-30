@@ -36,7 +36,6 @@ const translations = {
     crowdManagementDesc: "Enhance visitor experience and avoid crowds using AI and AR to reach destinations faster and smoother",
     
     // Contact Section
-    touch: "Touch",
     getInTouch: "Get in Touch",
     improveNavigation: "Let's Improve Your Navigation!",
     
@@ -71,7 +70,6 @@ const translations = {
     crowdManagementDesc: "تعزيز تجربة الزوار وتجنب الازدحام باستخدام الذكاء الاصطناعي والواقع المعزز للوصول إلى الوجهات بشكل أسرع وأكثر سلاسة",
     
     // Contact Section
-    touch: "تواصل معنا",
     getInTouch: "تواصل معنا",
     improveNavigation: "دعنا نحسن تجربتك في التنقل!",
     

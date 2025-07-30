@@ -40,8 +40,8 @@ const ContactSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent">
-            {t('touch')}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            {t('getInTouch')}
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground px-4">
             {t('improveNavigation')}
