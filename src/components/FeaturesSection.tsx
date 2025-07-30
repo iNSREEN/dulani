@@ -3,14 +3,14 @@ import { Cpu, ScanLine, Users } from 'lucide-react';
 const FeaturesSection = () => {
   const features = [
     {
-      icon: Cpu,
-      title: "AI-Powered Navigation",
-      description: "Delivers seamless and efficient guidance to help users reach their destinations with ease."
-    },
-    {
       icon: ScanLine,
       title: "AR Visual Guidance", 
       description: "Interactive directions overlaid on your surroundings."
+    },
+    {
+      icon: Cpu,
+      title: "AI-Powered Navigation",
+      description: "Delivers seamless and efficient guidance to help users reach their destinations with ease."
     },
     {
       icon: Users,
