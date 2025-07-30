@@ -42,7 +42,7 @@ const ContactSection = () => {
             Get in <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground px-4">
-            Ready to transform your navigation experience? Contact us today
+            Let's Improve Your Navigation! Contact Us
           </p>
         </div>
 
