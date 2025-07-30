@@ -77,7 +77,7 @@ const Header = () => {
             {/* Language Toggle Button */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center space-x-2 px-3 py-2 rounded-md border border-border hover:bg-accent hover:text-accent-foreground transition-colors duration-200"
+              className="flex items-center space-x-3 rtl:space-x-reverse px-3 py-2 rounded-md border border-border hover:bg-accent hover:text-accent-foreground transition-colors duration-200"
               title={language === 'en' ? 'Switch to Arabic' : 'Switch to English'}
             >
               <Globe className="w-4 h-4" />
@@ -111,7 +111,7 @@ const Header = () => {
               {/* Mobile Language Toggle */}
               <button
                 onClick={toggleLanguage}
-                className="flex items-center space-x-2 px-3 py-2 rounded-md border border-border hover:bg-accent hover:text-accent-foreground transition-colors duration-200 w-fit"
+                className="flex items-center space-x-3 rtl:space-x-reverse px-3 py-2 rounded-md border border-border hover:bg-accent hover:text-accent-foreground transition-colors duration-200 w-fit"
                 title={language === 'en' ? 'Switch to Arabic' : 'Switch to English'}
               >
                 <Globe className="w-4 h-4" />
