@@ -8,8 +8,8 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: language === 'en' ? "Email" : "البريد الالكتروني",
-      value: "Lujain@dulanii.com",
-      href: "mailto:Lujain@dulanii.com"
+      value: "info@dulanii.com",
+      href: "mailto:info@dulanii.com"
     },
     {
       icon: Phone,
