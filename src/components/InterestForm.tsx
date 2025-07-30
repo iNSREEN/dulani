@@ -23,6 +23,7 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const formSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -53,6 +54,7 @@ export function InterestForm({ children }: InterestFormProps) {
   const [showOtherInput, setShowOtherInput] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -84,21 +86,21 @@ export function InterestForm({ children }: InterestFormProps) {
       // With no-cors mode, we can't check response, so assume success
       console.log('Form submitted successfully');
       
-      toast({
-        title: "Success!",
-        description: "Thank you for your interest! We'll be in touch soon.",
-      });
+       toast({
+         title: "Success!",
+         description: t('successMessage'),
+       });
       
       setOpen(false);
       form.reset();
       setShowOtherInput(false);
     } catch (error) {
       console.error('Error submitting form:', error);
-      toast({
-        title: "Error",
-        description: "Failed to submit form. Please check your connection and try again.",
-        variant: "destructive",
-      });
+       toast({
+         title: "Error",
+         description: t('errorMessage'),
+         variant: "destructive",
+       });
     } finally {
       setIsSubmitting(false);
     }
@@ -131,20 +133,20 @@ export function InterestForm({ children }: InterestFormProps) {
         {children}
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto mx-4">
-        <DialogHeader>
-          <DialogTitle style={{ color: '#001A6E' }}>We'd Love to Hear From You!</DialogTitle>
-        </DialogHeader>
+         <DialogHeader>
+           <DialogTitle style={{ color: '#001A6E' }}>{t('interestTitle')}</DialogTitle>
+         </DialogHeader>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Name</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Your full name" {...field} />
-                  </FormControl>
+                 <FormItem>
+                   <FormLabel>{t('fullName')}</FormLabel>
+                   <FormControl>
+                     <Input placeholder={t('fullName')} {...field} />
+                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
@@ -154,11 +156,11 @@ export function InterestForm({ children }: InterestFormProps) {
               control={form.control}
               name="email"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email Address</FormLabel>
-                  <FormControl>
-                    <Input placeholder="your.email@example.com" {...field} />
-                  </FormControl>
+                 <FormItem>
+                   <FormLabel>{t('emailAddress')}</FormLabel>
+                   <FormControl>
+                     <Input placeholder={t('emailAddress')} {...field} />
+                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
@@ -168,11 +170,11 @@ export function InterestForm({ children }: InterestFormProps) {
               control={form.control}
               name="phone"
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
-                  <FormControl>
-                    <Input placeholder="+966 5X XXX XXXX" {...field} />
-                  </FormControl>
+                 <FormItem>
+                   <FormLabel>{t('organization')}</FormLabel>
+                   <FormControl>
+                     <Input placeholder={t('organization')} {...field} />
+                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
@@ -212,15 +214,15 @@ export function InterestForm({ children }: InterestFormProps) {
                 control={form.control}
                 name="otherDetails"
                 render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Please specify</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder="Tell us how you heard about us..."
-                        className="resize-none"
-                        {...field}
-                      />
-                    </FormControl>
+                   <FormItem>
+                     <FormLabel>{t('message')}</FormLabel>
+                     <FormControl>
+                       <Textarea
+                         placeholder={t('message')}
+                         className="resize-none"
+                         {...field}
+                       />
+                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -230,19 +232,19 @@ export function InterestForm({ children }: InterestFormProps) {
             <FormField
               control={form.control}
               name="comments"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Comments</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder="Any additional comments or questions..."
-                      className="resize-none"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+               render={({ field }) => (
+                 <FormItem>
+                   <FormLabel>{t('message')}</FormLabel>
+                   <FormControl>
+                     <Textarea
+                       placeholder={t('message')}
+                       className="resize-none"
+                       {...field}
+                     />
+                   </FormControl>
+                   <FormMessage />
+                 </FormItem>
+               )}
             />
 
             <FormField
@@ -272,12 +274,12 @@ export function InterestForm({ children }: InterestFormProps) {
                 onClick={() => setOpen(false)}
                 disabled={isSubmitting}
                 className="w-full sm:w-auto hover:bg-gray-100 hover:text-gray-700"
-              >
-                Cancel
-              </Button>
-              <Button type="submit" disabled={isSubmitting} className="w-full sm:w-auto">
-                {isSubmitting ? 'Submitting...' : 'Submit'}
-              </Button>
+               >
+                 Cancel
+               </Button>
+               <Button type="submit" disabled={isSubmitting} className="w-full sm:w-auto">
+                 {isSubmitting ? t('submitting') : t('submit')}
+               </Button>
             </div>
           </form>
         </Form>

@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Menu, X, Languages } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [language, setLanguage] = useState<'en' | 'ar'>('en');
+  const { language, setLanguage, t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -19,10 +20,10 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: 'About', id: 'about' },
-    { label: 'Features', id: 'features' },
-    { label: 'Team', id: 'team' },
-    { label: 'Contact', id: 'contact' },
+    { label: t('about'), id: 'about' },
+    { label: t('features'), id: 'features' },
+    { label: t('team'), id: 'team' },
+    { label: t('contact'), id: 'contact' },
   ];
 
   return (
