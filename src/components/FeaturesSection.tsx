@@ -2,7 +2,7 @@ import { Cpu, ScanLine, Users } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const FeaturesSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const features = [
     {
       icon: ScanLine,
@@ -31,7 +31,9 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Dulani's <span style={{background: 'linear-gradient(to right, #009990, #001A6E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>Features</span>
+            {language === 'en' ? (
+              <>Dulani's <span style={{background: 'linear-gradient(to right, #009990, #001A6E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>Features</span></>
+            ) : t('dulaniFeatures')}
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground">
             {t('cuttingEdgeTech')}
