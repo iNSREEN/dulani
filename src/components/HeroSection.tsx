@@ -16,7 +16,7 @@ const HeroSection = () => {
           <div className="space-y-6 sm:space-y-8 text-center lg:text-left rtl:lg:text-right order-2 lg:order-1">
             <div className="space-y-4 sm:space-y-6">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent">Dulani</span>{' '}
+                <span style={{background: 'linear-gradient(to right, #009990, #001A6E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>Dulani</span>{' '}
                 {t('heroTitle').replace('Dulani', '').trim()}
               </h1>
                 <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-full lg:max-w-lg mx-auto lg:mx-0">
