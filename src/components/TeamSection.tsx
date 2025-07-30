@@ -2,27 +2,27 @@ const TeamSection = () => {
   const teamMembers = [
     {
       name: "Fatima Aldukkan",
-      roles: ["XR developer", "AI specialist", "Innovation Practitioner", "Product Manager"],
+      roles: ["Co-Founder"],
       image: "/lovable-uploads/553446c0-92b4-48dd-8771-9215f0def097.png"
     },
     {
       name: "Nsreen Alfaifi", 
-      roles: ["Software developer", "Quality Assurance Engineer", "Researcher", "Technical Manager"],
+      roles: ["Co-Founder"],
       image: "/lovable-uploads/abf50def-8340-4f0f-831e-c1e73e5b3ec1.png"
     },
     {
       name: "Shekha Alabduslam",
-      roles: ["Metaverse developer", "AI specialist", "Digital Solutions Strategist", "Project Manager"],
+      roles: ["Co-Founder"],
       image: "/lovable-uploads/41f8fbe8-82c0-42fa-9bf0-4b9b822c384e.png"
     },
     {
       name: "Shaden Almashuq",
-      roles: ["AI Specialist", "UI/UX Designer", "Project Manager", "Business Developer"],
+      roles: ["Co-Founder"],
       image: "/lovable-uploads/b3dc2372-c162-466a-8fe0-99bb7e11bac4.png"
     },
     {
       name: "Lujain Alahrbi",
-      roles: ["AI Specialist", "UI/UX Designer", "Project Manager", "Business Developer"],
+      roles: ["Co-Founder"],
       image: "/lovable-uploads/1c1bdd27-1183-47ca-9772-36da77403e04.png"
     }
   ];
