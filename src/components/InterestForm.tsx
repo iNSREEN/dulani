@@ -205,19 +205,38 @@ export function InterestForm({ children }: InterestFormProps) {
                   <FormLabel>{language === 'en' ? 'How did you hear about us?' : 'كيف سمعت عنا؟'}</FormLabel>
                   <div className="space-y-3">
                     {hearAboutUsOptions.map((option) => (
-                      <div key={option.id} className={`flex items-center ${language === 'ar' ? 'justify-end space-x-reverse' : ''} space-x-2`}>
-                        <Checkbox
-                          id={option.id}
-                          onCheckedChange={(checked) => 
-                            handleCheckboxChange(option.id, checked as boolean)
-                          }
-                        />
-                        <label
-                          htmlFor={option.id}
-                          className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                          {option.label}
-                        </label>
+                      <div key={option.id} className="flex items-center space-x-2">
+                        {language === 'ar' ? (
+                          <>
+                            <label
+                              htmlFor={option.id}
+                              className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mr-2"
+                            >
+                              {option.label}
+                            </label>
+                            <Checkbox
+                              id={option.id}
+                              onCheckedChange={(checked) => 
+                                handleCheckboxChange(option.id, checked as boolean)
+                              }
+                            />
+                          </>
+                        ) : (
+                          <>
+                            <Checkbox
+                              id={option.id}
+                              onCheckedChange={(checked) => 
+                                handleCheckboxChange(option.id, checked as boolean)
+                              }
+                            />
+                            <label
+                              htmlFor={option.id}
+                              className="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                            >
+                              {option.label}
+                            </label>
+                          </>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -268,18 +287,36 @@ export function InterestForm({ children }: InterestFormProps) {
               control={form.control}
               name="newsletter"
               render={({ field }) => (
-                <FormItem className={`flex flex-row items-start ${language === 'ar' ? 'justify-end space-x-reverse' : ''} space-x-3 space-y-0`}>
-                  <FormControl>
-                    <Checkbox
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                    />
-                  </FormControl>
-                  <div className="space-y-1 leading-none">
-                    <label className="text-sm leading-none">
-                      {language === 'en' ? "I'd like to receive the latest updates, news, and promotions" : 'أود تلقي آخر التحديثات والأخبار والعروض الترويجية'}
-                    </label>
-                  </div>
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                  {language === 'ar' ? (
+                    <>
+                      <div className="space-y-1 leading-none">
+                        <label className="text-sm leading-none">
+                          أود تلقي آخر التحديثات والأخبار والعروض الترويجية
+                        </label>
+                      </div>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                    </>
+                  ) : (
+                    <>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <label className="text-sm leading-none">
+                          I'd like to receive the latest updates, news, and promotions
+                        </label>
+                      </div>
+                    </>
+                  )}
                 </FormItem>
               )}
             />
