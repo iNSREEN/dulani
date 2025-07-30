@@ -205,7 +205,7 @@ export function InterestForm({ children }: InterestFormProps) {
                   <FormLabel>{language === 'en' ? 'How did you hear about us?' : 'كيف سمعت عنا؟'}</FormLabel>
                   <div className="space-y-3">
                     {hearAboutUsOptions.map((option) => (
-                      <div key={option.id} className={`flex items-center ${language === 'ar' ? 'space-x-reverse' : ''} space-x-2`}>
+                      <div key={option.id} className={`flex items-center ${language === 'ar' ? 'justify-end space-x-reverse' : ''} space-x-2`}>
                         <Checkbox
                           id={option.id}
                           onCheckedChange={(checked) => 
@@ -268,7 +268,7 @@ export function InterestForm({ children }: InterestFormProps) {
               control={form.control}
               name="newsletter"
               render={({ field }) => (
-                <FormItem className={`flex flex-row items-start ${language === 'ar' ? 'space-x-reverse' : ''} space-x-3 space-y-0`}>
+                <FormItem className={`flex flex-row items-start ${language === 'ar' ? 'justify-end space-x-reverse' : ''} space-x-3 space-y-0`}>
                   <FormControl>
                     <Checkbox
                       checked={field.value}
