@@ -62,7 +62,7 @@ const Header = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8 rtl:space-x-reverse rtl:space-x-10">
             {navItems.map((item) => (
               <button
                 key={item.id}
