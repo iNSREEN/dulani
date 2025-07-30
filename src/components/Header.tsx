@@ -67,7 +67,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => handleNavigation(item)}
-                className="relative text-foreground hover:text-primary transition-colors duration-200 group font-bold"
+                className={`relative text-foreground hover:text-primary transition-colors duration-200 group ${language === 'ar' ? 'font-black' : 'font-bold'}`}
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -102,7 +102,7 @@ const Header = () => {
                 <button
                   key={item.id}
                   onClick={() => handleNavigation(item)}
-                  className="text-left text-foreground hover:text-primary transition-colors duration-200 font-bold"
+                  className={`text-left text-foreground hover:text-primary transition-colors duration-200 ${language === 'ar' ? 'font-black' : 'font-bold'}`}
                 >
                   {item.label}
                 </button>
