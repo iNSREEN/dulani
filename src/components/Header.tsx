@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const { language, toggleLanguage, t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -36,10 +38,10 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: 'About', id: 'about' },
-    { label: 'Features', id: 'features' },
-    { label: 'Team', id: 'team', isPage: true },
-    { label: 'Contact', id: 'contact' },
+    { label: t('about'), id: 'about' },
+    { label: t('features'), id: 'features' },
+    { label: t('team'), id: 'team', isPage: true },
+    { label: t('contact'), id: 'contact' },
   ];
 
   return (
@@ -56,7 +58,7 @@ const Header = () => {
               alt="Dulani Logo" 
               className="w-10 h-10"
             />
-            <span className="text-2xl font-bold text-primary">Dulani</span>
+            <span className="text-2xl font-bold text-primary">{t('dulani')}</span>
           </button>
 
           {/* Desktop Navigation */}
@@ -71,6 +73,16 @@ const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
+            
+            {/* Language Toggle Button */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center space-x-2 px-3 py-2 rounded-md border border-border hover:bg-accent hover:text-accent-foreground transition-colors duration-200"
+              title={language === 'en' ? 'Switch to Arabic' : 'Switch to English'}
+            >
+              <Globe className="w-4 h-4" />
+              <span className="text-sm font-medium">{language === 'en' ? 'ع' : 'EN'}</span>
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -95,6 +107,16 @@ const Header = () => {
                   {item.label}
                 </button>
               ))}
+              
+              {/* Mobile Language Toggle */}
+              <button
+                onClick={toggleLanguage}
+                className="flex items-center space-x-2 px-3 py-2 rounded-md border border-border hover:bg-accent hover:text-accent-foreground transition-colors duration-200 w-fit"
+                title={language === 'en' ? 'Switch to Arabic' : 'Switch to English'}
+              >
+                <Globe className="w-4 h-4" />
+                <span className="text-sm font-medium">{language === 'en' ? 'ع' : 'EN'}</span>
+              </button>
             </div>
           </nav>
         )}

@@ -1,21 +1,23 @@
 import { Cpu, ScanLine, Users } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const FeaturesSection = () => {
+  const { t } = useLanguage();
   const features = [
     {
       icon: ScanLine,
-      title: "AR Visual Guidance", 
-      description: "Interactive directions overlaid on your surroundings."
+      title: t('arVisualGuidance'), 
+      description: t('arVisualDesc')
     },
     {
       icon: Cpu,
-      title: "AI-Powered Navigation",
-      description: "Delivers seamless and efficient guidance to help users reach their destinations with ease."
+      title: t('aiPoweredNav'),
+      description: t('aiPoweredDesc')
     },
     {
       icon: Users,
-      title: "Crowd Management",
-      description: "Enhance visitor experience and avoid crowds using AI and AR to reach destinations faster and smoother"
+      title: t('crowdManagement'),
+      description: t('crowdManagementDesc')
     }
   ];
 
@@ -29,10 +31,10 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Dulani's</span> Features
+            {t('dulaniFeatures')}
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground">
-            Cutting-edge technology for seamless navigation experiences
+            {t('cuttingEdgeTech')}
           </p>
         </div>
 

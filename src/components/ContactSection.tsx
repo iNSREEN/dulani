@@ -1,7 +1,9 @@
 import { Mail, Phone, Linkedin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 
 const ContactSection = () => {
+  const { t } = useLanguage();
   const contactInfo = [
     {
       icon: Mail,
@@ -39,10 +41,10 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Get in <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Touch</span>
+            {t('getInTouch')}
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground px-4">
-            Let's Improve Your Navigation!
+            {t('improveNavigation')}
           </p>
         </div>
 
