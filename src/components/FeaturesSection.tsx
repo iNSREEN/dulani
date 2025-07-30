@@ -5,7 +5,7 @@ const FeaturesSection = () => {
     {
       icon: Cpu,
       title: "AI-Powered Navigation",
-      description: "Advanced AI algorithms analyze real-time data to calculate optimal paths"
+      description: "Delivers seamless and efficient guidance to help users reach their destinations with ease."
     },
     {
       icon: ScanLine,
