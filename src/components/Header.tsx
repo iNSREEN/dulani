@@ -58,7 +58,7 @@ const Header = () => {
               alt="Dulani Logo" 
               className="w-10 h-10"
             />
-            <span className="text-2xl font-bold text-primary">{t('dulani')}</span>
+            <span className={`font-bold text-primary ${language === 'ar' ? 'text-3xl' : 'text-2xl'}`}>{t('dulani')}</span>
           </button>
 
           {/* Desktop Navigation */}
