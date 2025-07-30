@@ -57,7 +57,7 @@ const translations = {
     joinInterestList: "هل أنت مهتم؟ انضم إلينا",
     
     // About Section
-    whatIsDulani: "ما هو دلني",
+    whatIsDulani: "ما هو دلني؟",
     
     // Features Section
     dulaniFeatures: "مميزات دلني",
