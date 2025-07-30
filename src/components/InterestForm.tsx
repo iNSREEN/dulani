@@ -169,7 +169,7 @@ export function InterestForm({ children }: InterestFormProps) {
                   <FormLabel>{language === 'en' ? 'Email Address' : 'عنوان البريد الإلكتروني'}</FormLabel>
                   <FormControl>
                     <Input 
-                      placeholder={language === 'en' ? 'your.email@example.com' : 'البريد.الالكتروني@مثال.com'} 
+                      placeholder="xxxx@example.com"
                       className={language === 'ar' ? 'text-right' : ''}
                       {...field} 
                     />
