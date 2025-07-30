@@ -1,10 +1,8 @@
 import { useState } from 'react';
-import { Menu, X, Languages } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -20,10 +18,10 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: t('about'), id: 'about' },
-    { label: t('features'), id: 'features' },
-    { label: t('team'), id: 'team' },
-    { label: t('contact'), id: 'contact' },
+    { label: 'About', id: 'about' },
+    { label: 'Features', id: 'features' },
+    { label: 'Team', id: 'team' },
+    { label: 'Contact', id: 'contact' },
   ];
 
   return (
@@ -44,37 +42,26 @@ const Header = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="flex items-center space-x-6">
-            <nav className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="relative text-foreground hover:text-primary transition-colors duration-200 group font-bold"
-                >
-                  {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </button>
-              ))}
-            </nav>
+          <nav className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="relative text-foreground hover:text-primary transition-colors duration-200 group font-bold"
+              >
+                {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </button>
+            ))}
+          </nav>
 
-            {/* Language Toggle */}
-            <button
-              onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
-              className="flex items-center space-x-2 px-3 py-2 rounded-md border border-border hover:bg-accent hover:text-accent-foreground transition-colors duration-200"
-            >
-              <Languages className="w-4 h-4" />
-              <span className="text-sm font-medium">{language.toUpperCase()}</span>
-            </button>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}

@@ -1,7 +1,4 @@
-import { useLanguage } from '@/contexts/LanguageContext';
-
 const AboutSection = () => {
-  const { t } = useLanguage();
   return (
     <section id="about" className="py-32 -mt-16 relative overflow-hidden">
       {/* Curved top section that overlaps with hero */}
@@ -17,12 +14,14 @@ const AboutSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16">
         <div className="text-center max-w-4xl mx-auto">
-           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 md:mb-8 animate-fade-in">
-             {t('aboutTitle')} <span className="text-primary bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Dulani</span>?
-           </h2>
-           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed animate-fade-in delay-200 px-4">
-             {t('aboutDescription')}
-           </p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 md:mb-8 animate-fade-in">
+            What is <span className="text-primary bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Dulani</span>?
+          </h2>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed animate-fade-in delay-200 px-4">
+            Dulani is an AI-powered navigation app that transforms visitor experiences. 
+            Using augmented reality (AR) and real-time AI analytics, it provides seamless 
+            guidance, reduces congestion, and enhances accessibility.
+          </p>
         </div>
       </div>
     </section>
