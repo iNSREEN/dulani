@@ -21,7 +21,7 @@ const ContactSection = () => {
       icon: Linkedin,
       label: language === 'en' ? "LinkedIn" : "لنكدان",
       value: "Dulani",
-      href: "https://linkedin.com/company/dulani"
+      href: "https://www.linkedin.com/company/dulanii/"
     }
   ];
 
