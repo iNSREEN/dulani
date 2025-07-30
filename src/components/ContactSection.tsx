@@ -7,19 +7,19 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
+      label: language === 'en' ? "Email" : "البريد الالكتروني",
       value: "Lujain@dulanii.com",
       href: "mailto:Lujain@dulanii.com"
     },
     {
       icon: Phone,
-      label: "Phone", 
+      label: language === 'en' ? "Phone" : "الهاتف", 
       value: "0551201145",
       href: "tel:0551201145"
     },
     {
       icon: Linkedin,
-      label: "LinkedIn",
+      label: language === 'en' ? "LinkedIn" : "لنكدان",
       value: "Dulani",
       href: "https://linkedin.com/company/dulani"
     }
