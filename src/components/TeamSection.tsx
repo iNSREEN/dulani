@@ -22,7 +22,7 @@ const TeamSection = () => {
     },
     {
       name: "Lujain Alahrbi",
-      roles: ["Co-Founder"],
+      roles: ["Founder"],
       image: "/lovable-uploads/1c1bdd27-1183-47ca-9772-36da77403e04.png"
     }
   ];
