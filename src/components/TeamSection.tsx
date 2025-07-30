@@ -41,7 +41,7 @@ const TeamSection = () => {
             Meet Our <span className="bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">Team</span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground">
-            A talented team driving innovation in AI-powered navigation
+            A Talented Team Driving Innovation in AR Navigation Powered by AI
           </p>
         </div>
 
