@@ -28,16 +28,26 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="team" className="py-20 -mt-8 relative overflow-hidden">
-      {/* Flowing wave transition */}
-      <svg className="absolute top-0 left-0 w-full h-20" viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <section id="team" className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden min-h-screen">
+      {/* Enhanced gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-primary/5"></div>
+      
+      {/* Flowing wave transition - responsive */}
+      <svg className="absolute top-0 left-0 w-full h-16 sm:h-20 md:h-24" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M0,40 C300,10 600,70 900,40 C1050,20 1150,60 1200,40 L1200,120 L0,120 Z" 
-              fill="currentColor" className="text-primary/5"></path>
+              fill="currentColor" className="text-primary/8"></path>
       </svg>
       
-      {/* Organic background shapes */}
-      <div className="absolute top-32 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl transform -translate-x-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl transform translate-x-1/3"></div>
+      {/* Enhanced organic background shapes - responsive positioning */}
+      <div className="absolute top-20 sm:top-32 left-0 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gradient-to-br from-primary/10 to-secondary/5 rounded-full blur-3xl transform -translate-x-1/3 animate-pulse"></div>
+      <div className="absolute bottom-10 right-0 w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 bg-gradient-to-tl from-secondary/15 to-primary/8 rounded-full blur-3xl transform translate-x-1/4 animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 left-1/2 w-48 h-48 sm:w-64 sm:h-64 bg-gradient-to-r from-primary/5 to-secondary/10 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2 animate-pulse" style={{ animationDelay: '2s' }}></div>
+      
+      {/* Subtle grid pattern overlay */}
+      <div className="absolute inset-0 opacity-20" style={{
+        backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
+        backgroundSize: '24px 24px'
+      }}></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8">
         <div className="text-center mb-12 md:mb-16">
