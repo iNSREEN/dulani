@@ -36,7 +36,7 @@ const HeroSection = () => {
 
           {/* Right Side - Mobile Screenshots */}
           <div className="relative order-1 lg:order-2">
-            <div className="flex justify-center items-center space-x-1 sm:space-x-2 md:space-x-3 scale-75 sm:scale-90 md:scale-100">
+            <div className="flex justify-center items-center space-x-1 sm:space-x-2 md:space-x-3 [dir='rtl']:-space-x-1 [dir='rtl']:space-x-reverse [dir='rtl']:sm:-space-x-2 [dir='rtl']:sm:space-x-reverse [dir='rtl']:md:-space-x-3 [dir='rtl']:md:space-x-reverse scale-75 sm:scale-90 md:scale-100">
               {/* Mobile Frame 1 */}
               <div className="relative transform -rotate-12 hover:rotate-0 transition-transform duration-500">
                 <div className="w-[112px] h-[242px] sm:w-[128px] sm:h-[277px] md:w-[144px] md:h-[312px] lg:w-[160px] lg:h-[346px] xl:w-[176px] xl:h-[381px] bg-black rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[28px] p-1 sm:p-1.5 shadow-2xl">
