@@ -135,7 +135,7 @@ export function InterestForm({ children }: InterestFormProps) {
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto mx-4">
+      <DialogContent className={`sm:max-w-[425px] max-h-[90vh] overflow-y-auto mx-4 ${language === 'ar' ? 'text-right' : ''}`}>
         <DialogHeader>
           <DialogTitle style={{ color: '#001A6E' }}>
             {language === 'en' ? "We'd Love to Hear From You!" : "نحب أن نسمع منك!"}
@@ -150,7 +150,11 @@ export function InterestForm({ children }: InterestFormProps) {
                 <FormItem>
                   <FormLabel>{language === 'en' ? 'Name' : 'الاسم'}</FormLabel>
                   <FormControl>
-                    <Input placeholder={language === 'en' ? 'Your full name' : 'اسمك الكامل'} {...field} />
+                    <Input 
+                      placeholder={language === 'en' ? 'Your full name' : 'اسمك الكامل'} 
+                      className={language === 'ar' ? 'text-right' : ''}
+                      {...field} 
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -164,7 +168,11 @@ export function InterestForm({ children }: InterestFormProps) {
                 <FormItem>
                   <FormLabel>{language === 'en' ? 'Email Address' : 'عنوان البريد الإلكتروني'}</FormLabel>
                   <FormControl>
-                    <Input placeholder={language === 'en' ? 'your.email@example.com' : 'البريد.الالكتروني@مثال.com'} {...field} />
+                    <Input 
+                      placeholder={language === 'en' ? 'your.email@example.com' : 'البريد.الالكتروني@مثال.com'} 
+                      className={language === 'ar' ? 'text-right' : ''}
+                      {...field} 
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -178,7 +186,11 @@ export function InterestForm({ children }: InterestFormProps) {
                 <FormItem>
                   <FormLabel>{language === 'en' ? 'Phone Number' : 'رقم الهاتف'}</FormLabel>
                   <FormControl>
-                    <Input placeholder="+966 5X XXX XXXX" {...field} />
+                    <Input 
+                      placeholder="+966 5X XXX XXXX" 
+                      className={language === 'ar' ? 'text-right' : ''}
+                      {...field} 
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -224,7 +236,7 @@ export function InterestForm({ children }: InterestFormProps) {
                     <FormControl>
                       <Textarea
                         placeholder={language === 'en' ? 'Tell us how you heard about us...' : 'أخبرنا كيف سمعت عنا...'}
-                        className="resize-none"
+                        className={`resize-none ${language === 'ar' ? 'text-right' : ''}`}
                         {...field}
                       />
                     </FormControl>
@@ -243,7 +255,7 @@ export function InterestForm({ children }: InterestFormProps) {
                   <FormControl>
                     <Textarea
                       placeholder={language === 'en' ? 'Any additional comments or questions...' : 'أي تعليقات أو أسئلة إضافية...'}
-                      className="resize-none"
+                      className={`resize-none ${language === 'ar' ? 'text-right' : ''}`}
                       {...field}
                     />
                   </FormControl>
@@ -272,7 +284,7 @@ export function InterestForm({ children }: InterestFormProps) {
               )}
             />
 
-            <div className="flex flex-col sm:flex-row justify-end space-y-2 sm:space-y-0 sm:space-x-3">
+            <div className={`flex flex-col sm:flex-row ${language === 'ar' ? 'justify-start' : 'justify-end'} space-y-2 sm:space-y-0 sm:space-x-3`}>
               <Button
                 type="button"
                 variant="outline"
