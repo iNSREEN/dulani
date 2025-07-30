@@ -18,7 +18,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-16">
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 md:mb-8 animate-fade-in">
-            {t('whatIsDulani')}
+            What is <span className="bg-gradient-to-r from-primary via-blue-500 to-secondary bg-clip-text text-transparent">Dulani</span>?
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed animate-fade-in delay-200 px-4">
             Dulani is a solution that transforms visitor experiences. 
