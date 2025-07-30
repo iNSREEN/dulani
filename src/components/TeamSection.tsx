@@ -28,74 +28,62 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="team" className="py-20 -mt-8 relative overflow-hidden">
-      {/* Flowing wave transition */}
-      <svg className="absolute top-0 left-0 w-full h-20" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,40 C300,10 600,70 900,40 C1050,20 1150,60 1200,40 L1200,120 L0,120 Z" 
-              fill="currentColor" className="text-primary/5"></path>
-      </svg>
-      
-      {/* Organic background shapes */}
-      <div className="absolute top-32 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl transform -translate-x-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl transform translate-x-1/3"></div>
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Meet Our <span className="bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">Experts</span>
-          </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground">
-            A talented team driving innovation in AI-powered navigation
-          </p>
-        </div>
+    <section id="team" className="py-12 px-4 sm:px-6 lg:px-8 w-full max-w-7xl mx-auto">
+      <div className="text-center mb-8 md:mb-12">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+          Meet Our <span className="bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">Team</span>
+        </h1>
+        <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+          A talented team of experts driving innovation in AI-powered navigation and augmented reality solutions
+        </p>
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="group bg-card/90 backdrop-blur-sm rounded-2xl md:rounded-3xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-border/30 hover:border-primary/20 relative overflow-hidden"
-            >
-              {/* Card glow effect */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              <div className="relative z-10">
-                {/* Circular Image */}
-                <div className="flex justify-center mb-4">
-                  <div className="relative">
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary p-1">
-                      <div className="w-full h-full rounded-full bg-background"></div>
-                    </div>
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-300"
-                    />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 lg:gap-8">
+        {teamMembers.map((member, index) => (
+          <div
+            key={index}
+            className="group bg-card/95 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/30 hover:border-primary/30 relative overflow-hidden"
+          >
+            {/* Card glow effect */}
+            <div className="absolute inset-0 rounded-2xl lg:rounded-3xl bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <div className="relative z-10">
+              {/* Circular Image */}
+              <div className="flex justify-center mb-6">
+                <div className="relative">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary p-1 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-full h-full rounded-full bg-background"></div>
                   </div>
-                </div>
-
-                {/* Name */}
-                <h3 className="text-base sm:text-lg font-bold text-secondary text-center mb-2 group-hover:text-primary transition-colors duration-300">
-                  {member.name}
-                </h3>
-
-                {/* Gradient Divider */}
-                <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-4"></div>
-
-                {/* Roles */}
-                <div className="space-y-1">
-                  {member.roles.map((role, roleIndex) => (
-                    <div key={roleIndex} className="flex items-start">
-                      <span className="text-primary mr-2 text-sm group-hover:text-secondary transition-colors duration-300">•</span>
-                      <span className="text-muted-foreground text-sm leading-relaxed">
-                        {role}
-                      </span>
-                    </div>
-                  ))}
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-28 h-28 lg:w-32 lg:h-32 rounded-full object-cover relative z-10 group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
               </div>
+
+              {/* Name */}
+              <h3 className="text-lg lg:text-xl font-bold text-secondary text-center mb-3 group-hover:text-primary transition-colors duration-300">
+                {member.name}
+              </h3>
+
+              {/* Gradient Divider */}
+              <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-4"></div>
+
+              {/* Roles */}
+              <div className="space-y-2">
+                {member.roles.map((role, roleIndex) => (
+                  <div key={roleIndex} className="flex items-start">
+                    <span className="text-primary mr-2 text-sm group-hover:text-secondary transition-colors duration-300 mt-1">•</span>
+                    <span className="text-muted-foreground text-sm leading-relaxed">
+                      {role}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
