@@ -136,7 +136,7 @@ export function InterestForm({ children }: InterestFormProps) {
         {children}
       </DialogTrigger>
       <DialogContent className={`sm:max-w-[425px] max-h-[90vh] overflow-y-auto mx-4 ${language === 'ar' ? 'text-right' : ''}`}>
-        <DialogHeader>
+        <DialogHeader className="flex flex-row-reverse items-center justify-between">
           <DialogTitle style={{ color: '#001A6E' }}>
             {language === 'en' ? "We'd Love to Hear From You!" : "نحب أن نسمع منك!"}
           </DialogTitle>
