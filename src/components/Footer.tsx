@@ -4,7 +4,7 @@ const Footer = () => {
   const { t } = useLanguage();
   
   return (
-    <footer className="bg-muted text-muted-foreground py-12 relative overflow-hidden">
+    <footer className="bg-secondary text-secondary-foreground py-12 relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Logo and Brand - Left Side */}
@@ -19,7 +19,7 @@ const Footer = () => {
 
             {/* Copyright - Right Side */}
             <div className="text-center md:text-right">
-              <p className="text-muted-foreground/80">
+              <p className="text-secondary-foreground/80">
                 {t('copyright')}
               </p>
             </div>
