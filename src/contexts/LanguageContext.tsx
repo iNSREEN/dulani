@@ -89,7 +89,7 @@ const translations = {
     improveNavigation: "دعنا نحسن تجربتك في التنقل!",
     
     // Team Section
-    teamHeading: "تعرف على فريقنا",
+    teamHeading: "فريقنا",
     teamSubtitle: "فريق موهوب يقود الابتكار في التنقل بالواقع المعزز المدعوم بالذكاء الاصطناعي",
     
     // Team Members
