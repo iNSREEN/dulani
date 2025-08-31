@@ -42,7 +42,20 @@ const translations = {
     
     // Team Section
     teamHeading: "Team",
-    teamSubtitle: "A Talented Team Driving Innovation in AR Navigation Powered by AI"
+    teamSubtitle: "A Talented Team Driving Innovation in AR Navigation Powered by AI",
+    
+    // Team Members
+    fatimaAldukkan: "Fatima Aldukkan",
+    nsreenAlfaifi: "Nsreen Alfaifi",
+    shekhaAlabduslam: "Shekha Alabduslam",
+    shadenAlmashuq: "Shaden Almashuq",
+    lujainAlahrbi: "Lujain Alahrbi",
+    founder: "Founder",
+    coFounder: "Co-Founder",
+    
+    // Footer
+    copyright: "© 2024 Dulani. All rights reserved",
+    brandName: "Dulani"
   },
   ar: {
     // Header
@@ -76,8 +89,21 @@ const translations = {
     improveNavigation: "دعنا نحسن تجربتك في التنقل!",
     
     // Team Section
-    teamHeading: "الفريق",
-    teamSubtitle: "فريق موهوب يقود الابتكار في التنقل بالواقع المعزز المدعوم بالذكاء الاصطناعي"
+    teamHeading: "تعرف على فريقنا",
+    teamSubtitle: "فريق موهوب يقود الابتكار في التنقل بالواقع المعزز المدعوم بالذكاء الاصطناعي",
+    
+    // Team Members
+    fatimaAldukkan: "فاطمة الدكان",
+    nsreenAlfaifi: "نسرين الفيفي",
+    shekhaAlabduslam: "شيخه العبدالسلام",
+    shadenAlmashuq: "شادن المعشوق",
+    lujainAlahrbi: "لجين الحربي",
+    founder: "مؤسس",
+    coFounder: "شريك مؤسس",
+    
+    // Footer
+    copyright: "جميع الحقوق محفوظة © 2025",
+    brandName: "دلني"
   }
 };
 

@@ -4,28 +4,28 @@ const TeamSection = () => {
   const { t } = useLanguage();
   const teamMembers = [
     {
-      name: "Fatima Aldukkan",
-      roles: ["Co-Founder"],
+      nameKey: "fatimaAldukkan",
+      roleKey: "coFounder",
       image: "/lovable-uploads/553446c0-92b4-48dd-8771-9215f0def097.png"
     },
     {
-      name: "Nsreen Alfaifi", 
-      roles: ["Co-Founder"],
+      nameKey: "nsreenAlfaifi", 
+      roleKey: "coFounder",
       image: "/lovable-uploads/abf50def-8340-4f0f-831e-c1e73e5b3ec1.png"
     },
     {
-      name: "Shekha Alabduslam",
-      roles: ["Co-Founder"],
+      nameKey: "shekhaAlabduslam",
+      roleKey: "coFounder",
       image: "/lovable-uploads/41f8fbe8-82c0-42fa-9bf0-4b9b822c384e.png"
     },
     {
-      name: "Shaden Almashuq",
-      roles: ["Co-Founder"],
+      nameKey: "shadenAlmashuq",
+      roleKey: "coFounder",
       image: "/lovable-uploads/b3dc2372-c162-466a-8fe0-99bb7e11bac4.png"
     },
     {
-      name: "Lujain Alahrbi",
-      roles: ["Founder"],
+      nameKey: "lujainAlahrbi",
+      roleKey: "founder",
       image: "/lovable-uploads/1c1bdd27-1183-47ca-9772-36da77403e04.png"
     }
   ];
@@ -66,7 +66,7 @@ const TeamSection = () => {
                     </div>
                     <img
                       src={member.image}
-                      alt={member.name}
+                      alt={t(member.nameKey)}
                       className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover relative z-10 group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
@@ -74,7 +74,7 @@ const TeamSection = () => {
 
                 {/* Name */}
                 <h3 className="text-base sm:text-lg font-bold text-secondary text-center mb-2 group-hover:text-primary transition-colors duration-300">
-                  {member.name}
+                  {t(member.nameKey)}
                 </h3>
 
                 {/* Gradient Divider */}
@@ -82,14 +82,12 @@ const TeamSection = () => {
 
                 {/* Roles */}
                 <div className="space-y-1">
-                  {member.roles.map((role, roleIndex) => (
-                    <div key={roleIndex} className="flex items-start">
-                      <span className="text-primary mr-2 text-sm group-hover:text-secondary transition-colors duration-300">•</span>
-                      <span className="text-muted-foreground text-sm leading-relaxed">
-                        {role}
-                      </span>
-                    </div>
-                  ))}
+                  <div className="flex items-start">
+                    <span className="text-primary mr-2 text-sm group-hover:text-secondary transition-colors duration-300">•</span>
+                    <span className="text-muted-foreground text-sm leading-relaxed">
+                      {t(member.roleKey)}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
