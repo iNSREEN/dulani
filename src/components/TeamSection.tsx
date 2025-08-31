@@ -1,7 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const TeamSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const teamMembers = [
     {
       nameKey: "fatimaAldukkan",
@@ -48,7 +48,7 @@ const TeamSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
+        <div className={`grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 ${language === 'ar' ? 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' : 'md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'}`}>
           {teamMembers.map((member, index) => (
             <div
               key={index}
