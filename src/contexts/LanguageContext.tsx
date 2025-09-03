@@ -41,7 +41,7 @@ const translations = {
     improveNavigation: "Let's Improve Your Navigation!",
     
     // Team Section
-    teamHeading: "Team",
+    teamHeading: "Our Team",
     teamSubtitle: "A Talented Team Driving Innovation in AR Navigation Powered by AI",
     
     // Team Members
