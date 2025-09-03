@@ -5,11 +5,15 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const HeroSection = () => {
   const { t, language } = useLanguage();
   return (
-    <section id="hero" className="pt-16 sm:pt-20 md:pt-24 pb-0 min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-background via-primary/5 to-background">
+    <section id="hero" className={`pt-16 sm:pt-20 md:pt-24 pb-0 min-h-screen flex items-center relative overflow-hidden ${language === 'ar' ? 'bg-white' : 'bg-gradient-to-br from-background via-primary/5 to-background'}`}>
       {/* Floating geometric shapes */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute bottom-32 right-16 w-16 h-16 bg-secondary/15 rounded-full blur-lg animate-pulse delay-1000"></div>
-      <div className="absolute top-1/3 right-1/4 w-12 h-12 bg-primary/20 rounded-full blur-md animate-pulse delay-500"></div>
+      {language !== 'ar' && (
+        <>
+          <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute bottom-32 right-16 w-16 h-16 bg-secondary/15 rounded-full blur-lg animate-pulse delay-1000"></div>
+          <div className="absolute top-1/3 right-1/4 w-12 h-12 bg-primary/20 rounded-full blur-md animate-pulse delay-500"></div>
+        </>
+      )}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 xl:gap-16 items-center">
           {/* Left Side - Text + CTA */}
@@ -91,7 +95,9 @@ const HeroSection = () => {
             </div>
 
             {/* Background decoration */}
-            <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-primary/5 rounded-full blur-3xl"></div>
+            {language !== 'ar' && (
+              <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-primary/5 rounded-full blur-3xl"></div>
+            )}
           </div>
         </div>
       </div>
