@@ -19,7 +19,7 @@ const ContactSection = () => {
     },
     {
       icon: Linkedin,
-      label: language === 'en' ? "LinkedIn" : "لنكدان",
+      label: language === 'en' ? "LinkedIn" : "لينكدإن",
       value: "Dulani",
       href: "https://www.linkedin.com/company/dulanii/"
     }
