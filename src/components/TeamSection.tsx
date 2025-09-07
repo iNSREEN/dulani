@@ -6,32 +6,27 @@ const TeamSection = () => {
     {
       nameKey: "fatimaAldukkan",
       roleKey: "coFounder",
-      image: "/lovable-uploads/553446c0-92b4-48dd-8771-9215f0def097.png",
-      linkedinUrl: "https://www.linkedin.com/in/fatima-aldukkan-b71017276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+      image: "/lovable-uploads/553446c0-92b4-48dd-8771-9215f0def097.png"
     },
     {
       nameKey: "nsreenAlfaifi", 
       roleKey: "coFounder",
-      image: "/lovable-uploads/abf50def-8340-4f0f-831e-c1e73e5b3ec1.png",
-      linkedinUrl: "https://www.linkedin.com/in/nsreen-alfaifi/"
+      image: "/lovable-uploads/abf50def-8340-4f0f-831e-c1e73e5b3ec1.png"
     },
     {
       nameKey: "shekhaAlabduslam",
       roleKey: "coFounder",
-      image: "/lovable-uploads/41f8fbe8-82c0-42fa-9bf0-4b9b822c384e.png",
-      linkedinUrl: "https://www.linkedin.com/in/shekha-alabdulsalam"
+      image: "/lovable-uploads/41f8fbe8-82c0-42fa-9bf0-4b9b822c384e.png"
     },
     {
       nameKey: "shadenAlmashuq",
       roleKey: "coFounder",
-      image: "/lovable-uploads/b3dc2372-c162-466a-8fe0-99bb7e11bac4.png",
-      linkedinUrl: "https://www.linkedin.com/in/shaden-talal/"
+      image: "/lovable-uploads/b3dc2372-c162-466a-8fe0-99bb7e11bac4.png"
     },
     {
       nameKey: "lujainAlahrbi",
       roleKey: "founder",
-      image: "/lovable-uploads/1c1bdd27-1183-47ca-9772-36da77403e04.png",
-      linkedinUrl: "https://www.linkedin.com/in/lujain-alharbi-068a5125b/"
+      image: "/lovable-uploads/1c1bdd27-1183-47ca-9772-36da77403e04.png"
     }
   ];
 
@@ -55,12 +50,9 @@ const TeamSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
           {teamMembers.map((member, index) => (
-            <a
+            <div
               key={index}
-              href={member.linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-card/90 backdrop-blur-sm rounded-2xl md:rounded-3xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-border/30 hover:border-primary/20 relative overflow-hidden cursor-pointer block"
+              className="group bg-card/90 backdrop-blur-sm rounded-2xl md:rounded-3xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-border/30 hover:border-primary/20 relative overflow-hidden"
             >
               {/* Card glow effect */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -98,7 +90,7 @@ const TeamSection = () => {
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
