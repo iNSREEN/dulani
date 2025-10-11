@@ -57,7 +57,7 @@ const HeroSection = () => {
                   <div className="w-full h-full bg-white rounded-[16px] sm:rounded-[20px] md:rounded-[24px] lg:rounded-[26px] overflow-hidden relative">
                     {/* App Content */}
                     <img 
-                      src="/lovable-uploads/e92855f0-03d5-410f-8aba-ab63957392be.png" 
+                      src={`${import.meta.env.BASE_URL}lovable-uploads/e92855f0-03d5-410f-8aba-ab63957392be.png`} 
                       alt="Dulani Splash Screen"
                       className="w-full h-full object-cover"
                     />
@@ -71,7 +71,7 @@ const HeroSection = () => {
                   <div className="w-full h-full bg-white rounded-[12px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[22px] overflow-hidden relative">
                     {/* App Content */}
                     <img 
-                      src="/lovable-uploads/499054ec-64a7-4823-95ab-3728f92dd311.png" 
+                      src={`${import.meta.env.BASE_URL}lovable-uploads/499054ec-64a7-4823-95ab-3728f92dd311.png`} 
                       alt="Dulani Main Screen"
                       className="w-full h-full object-cover"
                     />
@@ -85,7 +85,7 @@ const HeroSection = () => {
                   <div className="w-full h-full bg-white rounded-[12px] sm:rounded-[16px] md:rounded-[20px] lg:rounded-[22px] overflow-hidden relative">
                     {/* App Content - AR Navigation Screenshot */}
                     <img 
-                      src="/lovable-uploads/f42455af-fb6f-4a55-9f04-a67f92fb397c.png" 
+                       src={`${import.meta.env.BASE_URL}lovable-uploads/f42455af-fb6f-4a55-9f04-a67f92fb397c.png`}
                       alt="Dulani AR Navigation"
                       className="w-full h-full object-cover"
                     />
