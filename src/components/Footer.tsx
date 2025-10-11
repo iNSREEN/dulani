@@ -10,7 +10,7 @@ const Footer = () => {
             {/* Logo and Brand - Left Side */}
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
               <img 
-                src="/lovable-uploads/24037984-72d9-41ea-a970-810925759561.png" 
+                src={`${import.meta.env.BASE_URL}lovable-uploads/24037984-72d9-41ea-a970-810925759561.png`} 
                 alt={`${t('brandName')} Logo`}
                 className="w-8 h-8"
               />
