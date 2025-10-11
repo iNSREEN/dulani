@@ -54,7 +54,7 @@ const Header = () => {
             className="flex items-center space-x-3 rtl:space-x-reverse rtl:space-x-5 hover:opacity-80 transition-opacity duration-200"
           >
             <img 
-              src="/lovable-uploads/24037984-72d9-41ea-a970-810925759561.png" 
+              src={`${import.meta.env.BASE_URL}lovable-uploads/24037984-72d9-41ea-a970-810925759561.png`} 
               alt="Dulani Logo" 
               className="w-10 h-10"
             />
