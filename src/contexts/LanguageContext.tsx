@@ -49,7 +49,7 @@ const translations = {
     nsreenAlfaifi: "Nsreen Alfaifi",
     shekhaAlabduslam: "Shekha Alabduslam",
     shadenAlmashuq: "Shaden Almashuq",
-    lujainAlahrbi: "Lujain Alahrbi",
+    lujainAlahrbi: "Lujain Alharbi",
     founder: "Founder",
     coFounder: "Co-Founder",
     
