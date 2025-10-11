@@ -120,7 +120,7 @@ const TeamSection = () => {
       // roleKey: "coFounder",
       // image: `${base}lovable-uploads/553446c0-92b4-48dd-8771-9215f0def097.png`,
       // linkedinUrl: "https://www.linkedin.com/in/fatima-aldukkan-b71017276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-      nameKey: "lujainAlahrbi",
+      nameKey: "lujainAlharbi",
       roleKey: "founder",
       image: `${base}lovable-uploads/1c1bdd27-1183-47ca-9772-36da77403e04.png`,
       linkedinUrl: "https://www.linkedin.com/in/lujain-alharbi-068a5125b/"
