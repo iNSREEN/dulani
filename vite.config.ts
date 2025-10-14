@@ -27,9 +27,6 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // 👇 VERY IMPORTANT: add your repo name here
-  base: "/dulani/",  // 
-
   server: {
     host: "::",
     port: 8080,
