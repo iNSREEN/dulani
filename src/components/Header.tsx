@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
   const { language, toggleLanguage, t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
@@ -26,7 +27,7 @@ const Header = () => {
       navigate(`/${item.id}`);
     } else {
       // If we're not on the home page, navigate there first
-      if (window.location.pathname !== '/') {
+      if (location.pathname !== '/') {
         navigate('/');
         // Wait for navigation to complete, then scroll
         setTimeout(() => scrollToSection(item.id), 100);
